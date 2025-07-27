@@ -1,8 +1,8 @@
 import {Outlet} from 'react-router-dom'
-import Header from './components/layout/Header.tsx'
-import Footer from './components/layout/Footer.tsx'
+import Header from '~/components/layout/Header.tsx'
+import Footer from '~/components/layout/Footer.tsx'
 
-function App() {
+export default function App() {
     // TODO: The logic for determining and setting the theme (light/dark) will be here
 
     return (
@@ -15,5 +15,3 @@ function App() {
         </div>
     )
 }
-
-export default App

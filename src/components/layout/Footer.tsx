@@ -1,4 +1,4 @@
-function Footer() {
+export default function Footer() {
     return (
         <footer className="border-t">
             <div
@@ -13,5 +13,3 @@ function Footer() {
         </footer>
     );
 }
-
-export default Footer;
