@@ -7,6 +7,7 @@ import Catalog from '~/pages/Catalog'
 import About from '~/pages/About'
 import Error from '~/pages/Error'
 import '~/index.css'
+// import {PROJECT_NAME} from '~/config/constants';
 
 const router = createBrowserRouter([
     {
@@ -31,7 +32,10 @@ const router = createBrowserRouter([
             },
         ],
     },
-])
+], {
+    // Base path for React Router DOM to GitHub Pages
+    // basename: `/${PROJECT_NAME}/`,
+})
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
