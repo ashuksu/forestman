@@ -1,7 +1,7 @@
 import {Container} from "~/components/layout/Container";
 import {APP_PATH} from "~/config/constants.ts";
 import {Link} from "react-router-dom";
-import logo from '/logo.svg';
+import logo from '~/assets/images/logo.svg';
 
 export default function Header() {
     return (
