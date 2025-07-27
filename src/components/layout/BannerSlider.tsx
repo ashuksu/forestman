@@ -35,9 +35,7 @@ export default function BannerSlider() {
                     clickable: true,
                 }}
                 loop={true}
-                lazy={true}
                 lazyPreloadPrevNext={1}
-                preloadImages={true}
                 className="mySwiper h-fit landscape:h-screen w-full  "
             >
                 {images.map((image) => (
