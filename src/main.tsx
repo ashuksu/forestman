@@ -1,10 +1,12 @@
 import {StrictMode} from 'react'
 import {createRoot} from 'react-dom/client'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import App from './App.tsx'
-import Home from './pages/Home.tsx'
-import Error from './pages/Error.tsx'
-import './index.css'
+import App from '~/App.tsx'
+import Home from '~/pages/Home'
+import Catalog from '~/pages/Catalog'
+import About from '~/pages/About'
+import Error from '~/pages/Error'
+import '~/index.css'
 
 const router = createBrowserRouter([
     {
@@ -15,7 +17,14 @@ const router = createBrowserRouter([
                 index: true,
                 element: <Home/>,
             },
-            // TODO: other pages: /catalog, /about ...
+            {
+                path: 'catalog',
+                element: <Catalog/>,
+            },
+            {
+                path: 'about',
+                element: <About/>,
+            },
             {
                 path: '*',
                 element: <Error/>,
