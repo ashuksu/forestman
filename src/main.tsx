@@ -7,7 +7,7 @@ import Catalog from '~/pages/Catalog'
 import About from '~/pages/About'
 import Error from '~/pages/Error'
 import '~/index.css'
-import {APP_PATH} from '~/config/constants';
+import {BASE_PATH} from '~/config/constants';
 
 const router = createBrowserRouter([
     {
@@ -27,13 +27,17 @@ const router = createBrowserRouter([
                 element: <About/>,
             },
             {
+                path: '404',
+                element: <Error/>,
+            },
+            {
                 path: '*',
                 element: <Error/>,
             },
         ],
     },
 ], {
-    basename: APP_PATH,
+    basename: BASE_PATH,
 })
 
 createRoot(document.getElementById('root')!).render(
