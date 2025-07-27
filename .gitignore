@@ -1,3 +1,8 @@
+# Git
+.git
+.gitattributes
+gh-pages/
+
 # Logs
 logs
 *.log
