@@ -2,11 +2,10 @@ import {defineConfig} from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
-// import {PROJECT_NAME} from "./src/config/constants";
+import {APP_PATH} from "./src/config/constants";
 
 export default defineConfig({
-    // For GitHub Pages
-    // base: `/${PROJECT_NAME}/`,
+    base: APP_PATH,
 
     plugins: [
         react(),
