@@ -7,7 +7,7 @@ export default function Header() {
     return (
         <header
             className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-            <Container className="flex items-center justify-between space-x-6 py-1 sm:py-2 lg:py-3">
+            <Container className="flex items-center justify-between space-x-6 h-10 sm:h-12 lg:h-15">
                 <Link to={APP_PATH} className="logo p-1 flex items-center">
                     <img src={logo} className="h-5 lg:h-8" alt="Logo"/>
                 </Link>
