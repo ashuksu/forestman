@@ -7,7 +7,7 @@ GIT_REPO_SSH_URL	:= git@github.com:ashuksu/forestman.git
 GIT_BRANCH			:= 'gh-pages'
 
 gh-init:
-	@mkdir -p $(GIT_BRANCH) && \
+	@mkdir -p $(GIT_BRANCH) || true && \
 	cd $(GIT_BRANCH) && \
 	git init && \
 	git remote add origin $(GIT_REPO_SSH_URL) && \
