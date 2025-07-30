@@ -1,12 +1,13 @@
-import {StrictMode} from 'react'
-import {createRoot} from 'react-dom/client'
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import App from '~/App.tsx'
-import Home from '~/pages/Home'
-import Catalog from '~/pages/Catalog'
-import About from '~/pages/About'
-import Error from '~/pages/Error'
-import '~/index.css'
+import {StrictMode} from 'react';
+import {createRoot} from 'react-dom/client';
+import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import {HeadProvider} from 'react-head';
+import App from '~/App.tsx';
+import Home from '~/pages/Home';
+import Catalog from '~/pages/Catalog';
+import About from '~/pages/About';
+import Error from '~/pages/Error';
+import '~/index.css';
 import {BASE_PATH} from '~/config/constants';
 
 const router = createBrowserRouter([
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
                 element: <About/>,
             },
             {
+                // for GH_PAGES
                 path: '404',
                 element: <Error/>,
             },
@@ -42,6 +44,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        <RouterProvider router={router}/>
+        <HeadProvider>
+            <RouterProvider router={router}/>
+        </HeadProvider>
     </StrictMode>,
 )
