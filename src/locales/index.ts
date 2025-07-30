@@ -1,9 +1,8 @@
-import enTranslation from './en/translation.json';
-import ruTranslation from './ru/translation.json';
-import ukTranslation from './uk/translation.json';
+const languageContext = import.meta.glob('./*/translation.json', { eager: true });
 
-export const resources = {
-    en: {translation: enTranslation},
-    ru: {translation: ruTranslation},
-    uk: {translation: ukTranslation},
-} as const;
+export const resources: Record<string, { translation: any }> = {};
+
+for (const path in languageContext) {
+    const lang = path.split('/')[1]; // './en/translation.json' → 'en'
+    resources[lang] = { translation: (languageContext[path] as any).default };
+}
