@@ -1,20 +1,21 @@
 import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
+import {initReactI18next} from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-import { availableLanguages, allTranslations } from '~/locales';
+import {allTranslations, availableLanguages} from '~/locales';
 import {
     COMPANY_NAME,
     COMPANY_SHORT_NAME,
-    WEBSITE_URL,
     PROJECT_AUTHOR,
+    PROJECT_AUTHOR_EMAIL,
     PROJECT_AUTHOR_URL,
-    PROJECT_AUTHOR_EMAIL
+    WEBSITE_URL
 } from '~/config/constants';
 
 const YEAR = new Date().getFullYear();
 
 type TranslationValue = string | number | boolean | null | TranslationObject | Array<TranslationValue>;
+
 interface TranslationObject {
     [key: string]: TranslationValue;
 }

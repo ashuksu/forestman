@@ -2,7 +2,7 @@ import en from './en/translation.json';
 import uk from './uk/translation.json';
 import ru from './ru/translation.json';
 
-export const allTranslations = { en, uk, ru };
+export const allTranslations = {en, uk, ru};
 
 export type Language = keyof typeof allTranslations;
 

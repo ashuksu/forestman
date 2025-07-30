@@ -2,7 +2,7 @@ import {Outlet} from 'react-router-dom'
 import Header from '~/components/layout/Header.tsx'
 import Footer from '~/components/layout/Footer.tsx'
 import {useTranslation} from 'react-i18next';
-import { useEffect } from 'react';
+import {useEffect} from 'react';
 
 export default function App() {
     // TODO: The logic for determining and setting the theme (light/dark) will be here
