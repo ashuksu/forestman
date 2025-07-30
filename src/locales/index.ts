@@ -1,8 +1,22 @@
-const languageContext = import.meta.glob('./*/translation.json', { eager: true });
+export const rawResources = import.meta.glob('./*/translation.json');
 
-export const resources: Record<string, { translation: any }> = {};
+export const availableLanguages = Object.keys(rawResources).map((path) =>
+    path.split('/')[1]
+);
 
-for (const path in languageContext) {
-    const lang = path.split('/')[1]; // './en/translation.json' → 'en'
-    resources[lang] = { translation: (languageContext[path] as any).default };
-}
+export const isSupportedLanguage = (lang: string): lang is string => {
+    return availableLanguages.includes(lang);
+};
+
+export const loadLocale = async (lang: string) => {
+    if (!isSupportedLanguage(lang)) lang = 'en';
+
+    const loader = rawResources[`./${lang}/translation.json`];
+    if (!loader) {
+        const fallback = rawResources[`./en/translation.json`];
+        return fallback ? (await fallback()).default : {};
+    }
+
+    const module = await loader();
+    return module.default;
+};
