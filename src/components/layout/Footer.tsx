@@ -1,6 +1,10 @@
 import {PROJECT_SHORT_NAME} from "~/config/constants";
+import {useTranslation} from "react-i18next";
 
 export default function Footer() {
+    const {t} = useTranslation();
+    const currentYear = new Date().getFullYear();
+
     return (
         <footer className="border-t">
             <div
@@ -8,6 +12,7 @@ export default function Footer() {
                 <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
                     <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
                         © {new Date().getFullYear()} {PROJECT_SHORT_NAME}. All Rights Reserved.
+                        {t('footer.copyright', {year: currentYear})}
                     </p>
                 </div>
                 {/* TODO: There may be social media icons here */}
