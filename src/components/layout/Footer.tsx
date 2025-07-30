@@ -1,5 +1,4 @@
 import {useTranslation} from "react-i18next";
-import {PROJECT_AUTHOR, PROJECT_AUTHOR_URL} from "~/config/constants.ts";
 
 export default function Footer() {
     const {t} = useTranslation();
@@ -13,13 +12,13 @@ export default function Footer() {
                         {t('footer.copyright')}
                     </p>
                     <a
-                        href={PROJECT_AUTHOR_URL}
+                        href={t('common.authorUrl')}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Go to GitHub"
                         className="uppercase font-black text-muted-foreground hover:text-[#e80000] transition-colors duration-300 text-lg md:text-xl"
                     >
-                        {PROJECT_AUTHOR}
+                        {t('common.author')}
                     </a>
                 </div>
                 {/* TODO: There may be social media icons here */}
