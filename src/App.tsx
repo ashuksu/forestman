@@ -1,8 +1,33 @@
-import {Outlet} from 'react-router-dom'
-import Header from '~/components/layout/Header.tsx'
-import Footer from '~/components/layout/Footer.tsx'
+import {Outlet, useNavigate} from 'react-router-dom';
+import Header from '~/components/layout/Header.tsx';
+import Footer from '~/components/layout/Footer.tsx';
 import {useTranslation} from 'react-i18next';
 import {useEffect} from 'react';
+import {BASE_PATH} from '~/config/constants';
+
+function RedirectHandler() {
+    const navigate = useNavigate();
+    const routerBasename = BASE_PATH;
+
+    useEffect(() => {
+        const redirectPath = localStorage.getItem('redirectPath');
+        if (redirectPath) {
+            localStorage.removeItem('redirectPath');
+
+            let pathAfterBase = redirectPath;
+            if (redirectPath.startsWith(routerBasename)) {
+                pathAfterBase = redirectPath.substring(routerBasename.length);
+            }
+            if (!pathAfterBase.startsWith('/')) {
+                pathAfterBase = '/' + pathAfterBase;
+            }
+
+            navigate(pathAfterBase, { replace: true });
+        }
+    }, [navigate, routerBasename]);
+
+    return null;
+}
 
 export default function App() {
     // TODO: The logic for determining and setting the theme (light/dark) will be here
@@ -19,9 +44,10 @@ export default function App() {
             {/*<Html lang={i18n.language}/> TODO: when will react-helmet-async be updated */}
             <Header/>
             <main className="flex-grow">
+                <RedirectHandler />
                 <Outlet/>
             </main>
             <Footer/>
         </div>
-    )
+    );
 }

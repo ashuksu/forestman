@@ -30,11 +30,6 @@ const router = createBrowserRouter([
                 element: <About/>,
             },
             {
-                // for GH_PAGES
-                path: '404',
-                element: <Error/>,
-            },
-            {
                 path: '*',
                 element: <Error/>,
             },
@@ -51,5 +46,5 @@ createRoot(document.getElementById('root')!).render(
                 <RouterProvider router={router}/>
             </HeadProvider>
         </I18nextProvider>
-    </StrictMode>,
+    </StrictMode>
 );

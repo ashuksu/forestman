@@ -4,8 +4,9 @@
 	<meta charset="utf-8">
 	<title>Redirecting...</title>
 	<script type="text/javascript">
-        var requestedPath = window.location.pathname;
+        var path = window.location.pathname;
         var basePath = '/forestman/';
+        localStorage.setItem('redirectPath', path);
         window.location.replace(basePath);
 	</script>
 </head>
