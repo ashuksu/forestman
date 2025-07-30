@@ -1,7 +1,10 @@
 {
   "common": {
     "companyFullName": "\"Майстерня {{COMPANY_NAME}}\"",
-    "websiteUrl": "{{WEBSITE_URL}}"
+    "websiteUrl": "{{WEBSITE_URL}}",
+    "author": "{{PROJECT_AUTHOR}}",
+    "authorUrl": "{{PROJECT_AUTHOR_URL}}",
+    "authorEmail": "{{PROJECT_AUTHOR_EMAIL}}"
   },
   "homePage": {
     "title": "{{common.companyFullName}} - Вироби з дерева ручної роботи",
