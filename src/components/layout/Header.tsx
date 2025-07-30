@@ -2,8 +2,15 @@ import {Container} from "~/components/layout/Container";
 import {APP_PATH} from "~/config/constants.ts";
 import {Link} from "react-router-dom";
 import logo from '~/assets/images/logo.svg';
+import {useTranslation} from "react-i18next";
 
 export default function Header() {
+    const {t, i18n} = useTranslation();
+
+    const changeLanguage = (lng: string) => {
+        i18n.changeLanguage(lng);
+    };
+
     return (
         <header
             className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -13,10 +20,15 @@ export default function Header() {
                 </Link>
 
                 <nav className="flex items-center space-x-6 text-sm font-medium">
-                    <Link to={`${APP_PATH}catalog`} className="hover:underline">Catalog</Link>
-                    <Link to={`${APP_PATH}about`} className="hover:underline">About</Link>
+                    <Link to={`${APP_PATH}catalog`} className="hover:underline">{t('header.catalogLink')}</Link>
+                    <Link to={`${APP_PATH}about`} className="hover:underline">{t('header.aboutLink')}</Link>
                 </nav>
-                {/* TODO: Theme switcher and trash button will go here */}
+
+                <div className="flex space-x-2">
+                    <button onClick={() => changeLanguage('en')} className="text-sm text-gray-700 dark:text-gray-300 hover:underline">EN</button>
+                    <button onClick={() => changeLanguage('ru')} className="text-sm text-gray-700 dark:text-gray-300 hover:underline">RU</button>
+                </div>
+                {/* TODO: Theme switcher and a cart button will go here */}
             </Container>
         </header>
     );
