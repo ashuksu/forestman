@@ -1,8 +1,11 @@
 {
   "name": "forestman",
-  "private": true,
   "version": "0.0.0",
+  "description": "React + TypeScript + Vite",
   "type": "module",
+  "license": "ISC",
+  "author": "ashuksu",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
