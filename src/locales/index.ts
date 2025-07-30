@@ -4,6 +4,10 @@ import ru from './ru/translation.json';
 
 export const allTranslations = {en, uk, ru};
 
+export type PageSectionKey = 'homePage' | 'aboutPage' | 'catalogPage' | 'errorPage';
+
+export type TranslationKey = PageSectionKey | 'common' | 'header' | 'footer';
+
 export type Language = keyof typeof allTranslations;
 
 export const availableLanguages = Object.keys(allTranslations) as Language[];
