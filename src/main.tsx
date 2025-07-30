@@ -9,6 +9,8 @@ import About from '~/pages/About';
 import Error from '~/pages/Error';
 import '~/index.css';
 import {BASE_PATH} from '~/config/constants';
+import i18n from './i18n';
+import {I18nextProvider} from 'react-i18next';
 
 const router = createBrowserRouter([
     {
@@ -44,8 +46,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        <HeadProvider>
-            <RouterProvider router={router}/>
-        </HeadProvider>
+        <I18nextProvider i18n={i18n}>
+            <HeadProvider>
+                <RouterProvider router={router}/>
+            </HeadProvider>
+        </I18nextProvider>
     </StrictMode>,
 )
