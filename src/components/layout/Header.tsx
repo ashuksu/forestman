@@ -19,15 +19,17 @@ export default function Header() {
                     <img src={logo} className="h-5 lg:h-8" alt="Logo"/>
                 </Link>
 
-                <nav className="flex items-center space-x-6 text-sm font-medium">
-                    <Link to={`${APP_PATH}catalog`} className="hover:underline">{t('header.catalogLink')}</Link>
-                    <Link to={`${APP_PATH}about`} className="hover:underline">{t('header.aboutLink')}</Link>
-                </nav>
+                <div className="flex items-center space-x-6">
+                    <nav className="flex items-center space-x-6 text-sm font-medium">
+                        <Link to={`${APP_PATH}catalog`} className="hover:underline">{t('header.catalogLink')}</Link>
+                        <Link to={`${APP_PATH}about`} className="hover:underline">{t('header.aboutLink')}</Link>
+                    </nav>
 
-                <div className="flex space-x-2">
-                    <button onClick={() => changeLanguage('en')} className="hover:underline">EN</button>
-                    <button onClick={() => changeLanguage('uk')} className="hover:underline">UA</button>
-                    <button onClick={() => changeLanguage('ru')} className="hover:underline">RU</button>
+                    <div className="flex space-x-2">
+                        <button onClick={() => changeLanguage('en')} className="hover:underline">EN</button>
+                        <button onClick={() => changeLanguage('uk')} className="hover:underline">UA</button>
+                        <button onClick={() => changeLanguage('ru')} className="hover:underline">RU</button>
+                    </div>
                 </div>
                 {/* TODO: Theme switcher and a cart button will go here */}
             </Container>
