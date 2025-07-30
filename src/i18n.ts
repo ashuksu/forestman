@@ -4,12 +4,13 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 import enTranslation from '~/locales/en/translation.json';
 import ruTranslation from '~/locales/ru/translation.json';
+import ukTranslation from '~/locales/uk/translation.json';
 
 i18n
     .use(LanguageDetector) // Language detection plugin
     .use(initReactI18next)
     .init({
-        fallbackLng: 'en',
+        fallbackLng: 'en', // Default language if the current one is not found
         debug: true, // TODO: disable in production (Enable debugging in console)
         interpolation: {
             escapeValue: false, // Don't escape HTML entities
@@ -20,6 +21,9 @@ i18n
             },
             ru: {
                 translation: ruTranslation,
+            },
+            uk: {
+                translation: ukTranslation,
             },
         },
         // Language detection configuration

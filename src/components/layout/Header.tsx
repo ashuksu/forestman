@@ -25,8 +25,9 @@ export default function Header() {
                 </nav>
 
                 <div className="flex space-x-2">
-                    <button onClick={() => changeLanguage('en')} className="text-sm text-gray-700 dark:text-gray-300 hover:underline">EN</button>
-                    <button onClick={() => changeLanguage('ru')} className="text-sm text-gray-700 dark:text-gray-300 hover:underline">RU</button>
+                    <button onClick={() => changeLanguage('en')} className="hover:underline">EN</button>
+                    <button onClick={() => changeLanguage('uk')} className="hover:underline">UA</button>
+                    <button onClick={() => changeLanguage('ru')} className="hover:underline">RU</button>
                 </div>
                 {/* TODO: Theme switcher and a cart button will go here */}
             </Container>
