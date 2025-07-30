@@ -1,38 +1,29 @@
 import i18n from 'i18next';
 import {initReactI18next} from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-
-import enTranslation from '~/locales/en/translation.json';
-import ruTranslation from '~/locales/ru/translation.json';
-import ukTranslation from '~/locales/uk/translation.json';
+import {resources} from '~/locales';
 
 i18n
-    .use(LanguageDetector) // Language detection plugin
+    .use(LanguageDetector)
     .use(initReactI18next)
     .init({
-        fallbackLng: 'en', // Default language if the current one is not found
-        debug: true, // TODO: disable in production (Enable debugging in console)
+        fallbackLng: 'en',
+        debug: import.meta.env.DEV,
         interpolation: {
-            escapeValue: false, // Don't escape HTML entities
+            escapeValue: false,
+            nestingPrefix: '{{',
+            nestingSuffix: '}}',
         },
-        resources: {
-            en: {
-                translation: enTranslation,
-            },
-            ru: {
-                translation: ruTranslation,
-            },
-            uk: {
-                translation: ukTranslation,
-            },
-        },
-        // Language detection configuration
+        resources,
         detection: {
             order: ['querystring', 'cookie', 'localStorage', 'navigator', 'htmlTag'],
             caches: ['localStorage', 'cookie'],
         },
-        ns: ['translation'], // Namespaces
+        ns: ['translation'],
         defaultNS: 'translation',
+        react: {
+            useSuspense: false,
+        },
     });
 
 export default i18n;
