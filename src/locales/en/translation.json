@@ -1,34 +1,33 @@
 {
   "common": {
-    "appName": "\"Forestman Woodcraft\"",
-    "author": "Forestman Team",
-    "websiteUrl": "https://yourwebsite.com/"
+    "companyFullName": "\"{{COMPANY_NAME}} Woodcraft\"",
+    "websiteUrl": "{{WEBSITE_URL}}"
   },
   "homePage": {
-    "title": "{{common.appName}} - Handcrafted Wooden Products",
-    "description": "Explore the unique collection of handcrafted wooden items at Forestman. Perfect gifts and home decor.",
-    "keywords": "woodcraft, handcrafted, wood products, wooden gifts, unique wood, artisan wood, forestman, woodworking",
-    "welcomeHeading": "Welcome to {{common.appName}}",
+    "title": "{{common.companyFullName}} - Handcrafted Wooden Products",
+    "description": "Explore the unique collection of handcrafted wooden items at {{COMPANY_NAME}}. Perfect gifts and home decor.",
+    "keywords": "woodcraft, handcrafted, wood products, wooden gifts, unique wood, artisan wood, {{COMPANY_SHORT_NAME}}, woodworking",
+    "welcomeHeading": "Welcome to {{common.companyFullName}}",
     "welcomeText": "Discover exquisite woodcraft creations, handmade with passion and precision."
   },
   "aboutPage": {
-    "title": "About Us - {{common.appName}}",
-    "description": "Learn more about {{common.appName}}, our mission, and the passion behind our handcrafted wooden products.",
-    "keywords": "woodcraft, handcrafted, wood products, wooden gifts, unique wood, artisan wood, forestman, woodworking, about us, mission",
-    "heading": "About {{common.appName}}",
-    "text": "{{common.appName}} is dedicated to creating unique and high-quality wooden products. Each item is carefully handcrafted, reflecting our commitment to traditional artistry and sustainable practices. We believe in the beauty of natural wood and strive to bring warmth and elegance into your home."
+    "title": "About Us - {{common.companyFullName}}",
+    "description": "Learn more about {{common.companyFullName}}, our mission, and the passion behind our handcrafted wooden products.",
+    "keywords": "woodcraft, handcrafted, wood products, wooden gifts, unique wood, artisan wood, {{COMPANY_SHORT_NAME}}, woodworking, about us, mission",
+    "heading": "About {{common.companyFullName}}",
+    "text": "{{common.companyFullName}} is dedicated to creating unique and high-quality wooden products. Each item is carefully handcrafted, reflecting our commitment to traditional artistry and sustainable practices. We believe in the beauty of natural wood and strive to bring warmth and elegance into your home."
   },
   "catalogPage": {
-    "title": "Woodcraft Catalog - {{common.appName}}",
+    "title": "Woodcraft Catalog - {{common.companyFullName}}",
     "description": "Browse our exquisite collection of handcrafted wooden products, including furniture, decor, and unique gifts.",
-    "keywords": "woodcraft, handcrafted, wood products, wooden gifts, unique wood, artisan wood, forestman, woodworking, catalog, shop",
+    "keywords": "woodcraft, handcrafted, wood products, wooden gifts, unique wood, artisan wood, {{COMPANY_SHORT_NAME}}, woodworking, catalog, shop",
     "heading": "Our Woodcraft Catalog",
     "text": "Explore our unique collection of handcrafted wooden items."
   },
   "errorPage": {
-    "title": "Page Not Found - {{common.appName}}",
+    "title": "Page Not Found - {{common.companyFullName}}",
     "description": "The page you are looking for could not be found.",
-    "keywords": "404, page not found, error, forestman",
+    "keywords": "404, page not found, error, {{COMPANY_SHORT_NAME}}",
     "heading": "404 - Page Not Found",
     "text": "The page you are looking for does not exist.",
     "goHome": "Go Home"
@@ -38,6 +37,6 @@
     "aboutLink": "About"
   },
   "footer": {
-    "copyright": "© {{year}} {{common.appName}}. All rights reserved."
+    "copyright": "© {{YEAR}} {{common.companyFullName}}. All rights reserved."
   }
 }
