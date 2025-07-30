@@ -11,21 +11,33 @@
     "description": "Explore the unique collection of handcrafted wooden items at {{COMPANY_NAME}}. Perfect gifts and home decor.",
     "keywords": "woodcraft, handcrafted, wood products, wooden gifts, unique wood, artisan wood, {{COMPANY_SHORT_NAME}}, woodworking",
     "welcomeHeading": "Welcome to {{common.companyFullName}}",
-    "welcomeText": "Discover exquisite woodcraft creations, handmade with passion and precision."
+    "welcomeText": "Discover exquisite woodcraft creations, handmade with passion and precision.",
+    "meta": {
+      "ogImage": "https://placehold.co/1200x630/cccccc/333333?text=Forestman+Home",
+      "twitterImage": "https://placehold.co/1200x675/cccccc/333333?text=Forestman+Home"
+    }
   },
   "aboutPage": {
     "title": "About Us - {{common.companyFullName}}",
     "description": "Learn more about {{common.companyFullName}}, our mission, and the passion behind our handcrafted wooden products.",
     "keywords": "woodcraft, handcrafted, wood products, wooden gifts, unique wood, artisan wood, {{COMPANY_SHORT_NAME}}, woodworking, about us, mission",
     "heading": "About {{common.companyFullName}}",
-    "text": "{{common.companyFullName}} is dedicated to creating unique and high-quality wooden products. Each item is carefully handcrafted, reflecting our commitment to traditional artistry and sustainable practices. We believe in the beauty of natural wood and strive to bring warmth and elegance into your home."
+    "text": "{{common.companyFullName}} is dedicated to creating unique and high-quality wooden products. Each item is carefully handcrafted, reflecting our commitment to traditional artistry and sustainable practices. We believe in the beauty of natural wood and strive to bring warmth and elegance into your home.",
+    "meta": {
+      "ogImage": "https://placehold.co/1200x630/cccccc/333333?text=Forestman+About",
+      "twitterImage": "https://placehold.co/1200x675/cccccc/333333?text=Forestman+About"
+    }
   },
   "catalogPage": {
     "title": "Woodcraft Catalog - {{common.companyFullName}}",
     "description": "Browse our exquisite collection of handcrafted wooden products, including furniture, decor, and unique gifts.",
     "keywords": "woodcraft, handcrafted, wood products, wooden gifts, unique wood, artisan wood, {{COMPANY_SHORT_NAME}}, woodworking, catalog, shop",
     "heading": "Our Woodcraft Catalog",
-    "text": "Explore our unique collection of handcrafted wooden items."
+    "text": "Explore our unique collection of handcrafted wooden items.",
+    "meta": {
+      "ogImage": "https://placehold.co/1200x630/cccccc/333333?text=Forestman+Catalog",
+      "twitterImage": "https://placehold.co/1200x675/cccccc/333333?text=Forestman+Catalog"
+    }
   },
   "errorPage": {
     "title": "Page Not Found - {{common.companyFullName}}",
@@ -33,7 +45,11 @@
     "keywords": "404, page not found, error, {{COMPANY_SHORT_NAME}}",
     "heading": "404 - Page Not Found",
     "text": "The page you are looking for does not exist.",
-    "goHome": "Go Home"
+    "goHome": "Go Home",
+    "meta": {
+      "ogImage": "https://placehold.co/1200x630/cccccc/333333?text=Forestman+Error",
+      "twitterImage": "https://placehold.co/1200x675/cccccc/333333?text=Forestman+Error"
+    }
   },
   "header": {
     "catalogLink": "Catalog",
