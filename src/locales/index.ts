@@ -1,33 +1,15 @@
-export const rawResources = import.meta.glob('./*/translation.json');
+import en from './en/translation.json';
+import uk from './uk/translation.json';
+import ru from './ru/translation.json';
 
-export const availableLanguages = Object.keys(rawResources).map((path) =>
-    path.split('/')[1]
-);
+export const allTranslations = { en, uk, ru };
 
-/**
- * Checks if the language is supported.
- * @param lang Language code.
- * @returns true if supported, else false.
- */
-export const isSupportedLanguage = (lang: string): lang is string => {
-    return availableLanguages.includes(lang);
-};
+export type Language = keyof typeof allTranslations;
 
-/**
- * Dynamically loads the translation file for the given language.
- * Loads English ('en') if language is unsupported or file missing.
- * @param lang Language code.
- * @returns Translation object.
- */
-export const loadLocale = async (lang: string) => {
-    if (!isSupportedLanguage(lang)) lang = 'en';
+export const availableLanguages = Object.keys(allTranslations) as Language[];
 
-    const loader = rawResources[`./${lang}/translation.json`];
-    if (!loader) {
-        const fallback = rawResources[`./en/translation.json`];
-        return fallback ? (await fallback()).default : {};
-    }
+export const isSupportedLanguage = (lang: string): lang is Language =>
+    availableLanguages.includes(lang as Language);
 
-    const module = await loader();
-    return module.default;
-};
+export const loadLocale = (lang: string) =>
+    allTranslations[isSupportedLanguage(lang) ? lang : 'en'];

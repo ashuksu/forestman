@@ -42,7 +42,7 @@ const router = createBrowserRouter([
     },
 ], {
     basename: BASE_PATH,
-})
+});
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
@@ -52,4 +52,4 @@ createRoot(document.getElementById('root')!).render(
             </HeadProvider>
         </I18nextProvider>
     </StrictMode>,
-)
+);
