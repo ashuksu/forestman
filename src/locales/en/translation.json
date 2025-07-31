@@ -63,6 +63,7 @@
   "contacts": {
     "heading": "Contacts",
     "text": "If you have any questions or need assistance, please contact us using the details below.",
+    "contactNote": "If you couldn’t reach me — don’t worry 🪓 \nI’m probably carving, sanding, or crafting something wooden, warm, and useful — for you or maybe your neighbours.\n\nJust write in the form, send an email, or leave a message in a messenger (Telegram, Viber — whichever works for you).\n\nI’ll get back to you as soon as I check my phone.\nUsually I reply in my free time or after work in the workshop 🍺",
     "email": {
       "name": "Email",
       "value": "{{COMPANY_EMAIL}}"
@@ -93,6 +94,19 @@
     "youtube": {
       "name": "YouTube",
       "value": "{{COMPANY_YOUTUBE}}"
+    }
+  },
+  "form": {
+    "heading": "Contact Us",
+    "text": "If you would like to place a custom order, share your ideas, ask a question, or send us a message — please use this form. We will get back to you via the email you provide.",
+    "name": "Your Name",
+    "email": "Email Address",
+    "message": "Message",
+    "submit": "Send Message",
+    "success": "Thank you! Your message has been sent.",
+    "errors": {
+      "required": "This field is required",
+      "invalidEmail": "Please enter a valid email address"
     }
   }
 }
