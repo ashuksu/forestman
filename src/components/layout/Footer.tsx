@@ -12,13 +12,13 @@ export default function Footer() {
                         {t('footer.copyright')}
                     </p>
                     <a
-                        href={t('common.authorUrl')}
+                        href={t('common.author.url')}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Go to GitHub"
                         className="uppercase font-black text-muted-foreground hover:text-[#e80000] transition-colors duration-300 text-lg md:text-xl"
                     >
-                        {t('common.author')}
+                        {t('common.author.name')}
                     </a>
                 </div>
                 {/* TODO: There may be social media icons here */}

@@ -13,7 +13,7 @@ export default function PageMeta({pageKey, pagePath}: PageMetaProps) {
     const title = t(`${pageKey}.title`) || t('common.companyFullName');
     const description = t(`${pageKey}.description`) || t('homePage.description');
     const keywords = t(`${pageKey}.keywords`) || t('homePage.keywords');
-    const author = t('common.author');
+    const author = t('common.author.name');
     const websiteUrl = t('common.websiteUrl') + (pagePath ? pagePath : '');
 
     // TODO: add images ogImage and twitterImage, write addresses in translations
