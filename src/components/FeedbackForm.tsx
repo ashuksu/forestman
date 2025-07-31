@@ -22,15 +22,25 @@ export default function FeedbackForm() {
     const [errors, setErrors] = useState<Partial<FormData>>({});
     const [submitted, setSubmitted] = useState(false);
     const messageRef = useRef<HTMLTextAreaElement>(null);
+    const isInitialMount = useRef(true);
 
     useEffect(() => {
         const saved = localStorage.getItem(STORAGE_KEY);
         if (saved) {
-            setForm(JSON.parse(saved));
+            try {
+                setForm(JSON.parse(saved));
+            } catch (e) {
+                console.error("Failed to parse saved form data:", e);
+                localStorage.removeItem(STORAGE_KEY);
+            }
         }
     }, []);
 
     useEffect(() => {
+        if (isInitialMount.current) {
+            isInitialMount.current = false;
+            return;
+        }
         localStorage.setItem(STORAGE_KEY, JSON.stringify(form));
     }, [form]);
 
