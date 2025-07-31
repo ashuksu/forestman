@@ -9,7 +9,12 @@ export const PROJECT_AUTHOR_EMAIL = 'ashuksu@gmail.com';
 export const COMPANY_NAME = 'Forestman';
 export const COMPANY_SHORT_NAME = 'forestman';
 export const COMPANY_EMAIL = 'email@example.com';
-export const COMPANY_PHONE = '+1234567890';
+export const COMPANY_PHONE_1 = '+1234567890';
+export const COMPANY_PHONE_2 = '+0987654321';
+export const COMPANY_TELEGRAM = '@example123123';
+export const COMPANY_TELEGRAM_LINK = 'https://t.me/example123123';
+export const COMPANY_FACEBOOK = 'https://www.facebook.com/example.123123';
+export const COMPANY_YOUTUBE = 'https://www.youtube.com/@123123';
 
 export const WEBSITE_URL = 'https://yourwebsite.com/';
 // export const BASE_PATH = `/${PROJECT_NAME}`;

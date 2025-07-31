@@ -2,9 +2,44 @@
   "common": {
     "companyFullName": "\"{{COMPANY_NAME}} Woodcraft\"",
     "websiteUrl": "{{WEBSITE_URL}}",
-    "author": "{{PROJECT_AUTHOR}}",
-    "authorUrl": "{{PROJECT_AUTHOR_URL}}",
-    "authorEmail": "{{PROJECT_AUTHOR_EMAIL}}"
+    "author": {
+      "name": "{{PROJECT_AUTHOR}}",
+      "url": "{{PROJECT_AUTHOR_URL}}",
+      "email": "{{PROJECT_AUTHOR_EMAIL}}"
+    },
+    "contacts": {
+      "email": {
+        "name": "Email",
+        "value": "{{COMPANY_EMAIL}}"
+      },
+      "phone1": {
+        "name": "Phone",
+        "value": "{{COMPANY_PHONE_1}}"
+      },
+      "phone2": {
+        "name": "Phone",
+        "value": "{{COMPANY_PHONE_2}}"
+      },
+      "address": {
+        "name": "Address",
+        "value": "15 Svobody Street, Kharkiv, Kharkiv region, 987654, Ukraine"
+      }
+    },
+    "socials": {
+      "telegram": {
+        "name": "Telegram",
+        "value": "{{COMPANY_TELEGRAM_LINK}}",
+        "text": "{{COMPANY_TELEGRAM}}"
+      },
+      "facebook": {
+        "name": "Facebook",
+        "value": "{{COMPANY_FACEBOOK}}"
+      },
+      "youtube": {
+        "name": "YouTube",
+        "value": "{{COMPANY_YOUTUBE}}"
+      }
+    }
   },
   "homePage": {
     "title": "{{common.companyFullName}} - Handcrafted Wooden Products",

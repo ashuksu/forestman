@@ -2,9 +2,44 @@
   "common": {
     "companyFullName": "\"Майстерня {{COMPANY_NAME}}\"",
     "websiteUrl": "{{WEBSITE_URL}}",
-    "author": "{{PROJECT_AUTHOR}}",
-    "authorUrl": "{{PROJECT_AUTHOR_URL}}",
-    "authorEmail": "{{PROJECT_AUTHOR_EMAIL}}"
+    "author": {
+      "name": "{{PROJECT_AUTHOR}}",
+      "url": "{{PROJECT_AUTHOR_URL}}",
+      "email": "{{PROJECT_AUTHOR_EMAIL}}"
+    },
+    "contacts": {
+      "email": {
+        "name": "Email",
+        "value": "{{COMPANY_EMAIL}}"
+      },
+      "phone1": {
+        "name": "Phone",
+        "value": "{{COMPANY_PHONE_1}}"
+      },
+      "phone2": {
+        "name": "Phone",
+        "value": "{{COMPANY_PHONE_2}}"
+      },
+      "address": {
+        "name": "Address",
+        "value": "вул. Свободи, 15, м. Харків, Харківська область, 987654, Україна"
+      }
+    },
+    "socials": {
+      "telegram": {
+        "name": "Telegram",
+        "value": "{{COMPANY_TELEGRAM_LINK}}",
+        "text": "{{COMPANY_TELEGRAM}}"
+      },
+      "facebook": {
+        "name": "Facebook",
+        "value": "{{COMPANY_FACEBOOK}}"
+      },
+      "youtube": {
+        "name": "YouTube",
+        "value": "{{COMPANY_YOUTUBE}}"
+      }
+    }
   },
   "homePage": {
     "title": "{{common.companyFullName}} - Вироби з дерева ручної роботи",
