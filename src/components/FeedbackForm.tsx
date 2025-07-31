@@ -116,6 +116,7 @@ export default function FeedbackForm() {
                         'border-gray-300': !errors.message
                     })}
                     rows={5}
+                    maxLength={1000}
                     ref={messageRef}
                     required
                 />
