@@ -6,39 +6,6 @@
       "name": "{{PROJECT_AUTHOR}}",
       "url": "{{PROJECT_AUTHOR_URL}}",
       "email": "{{PROJECT_AUTHOR_EMAIL}}"
-    },
-    "contacts": {
-      "email": {
-        "name": "Email",
-        "value": "{{COMPANY_EMAIL}}"
-      },
-      "phone1": {
-        "name": "Phone",
-        "value": "{{COMPANY_PHONE_1}}"
-      },
-      "phone2": {
-        "name": "Phone",
-        "value": "{{COMPANY_PHONE_2}}"
-      },
-      "address": {
-        "name": "Address",
-        "value": "вул. Свободи, 15, м. Харків, Харківська область, 987654, Україна"
-      }
-    },
-    "socials": {
-      "telegram": {
-        "name": "Telegram",
-        "value": "{{COMPANY_TELEGRAM_LINK}}",
-        "text": "{{COMPANY_TELEGRAM}}"
-      },
-      "facebook": {
-        "name": "Facebook",
-        "value": "{{COMPANY_FACEBOOK}}"
-      },
-      "youtube": {
-        "name": "YouTube",
-        "value": "{{COMPANY_YOUTUBE}}"
-      }
     }
   },
   "homePage": {
@@ -92,5 +59,40 @@
   },
   "footer": {
     "copyright": "© {{YEAR}} {{common.companyFullName}}. Всі права захищені."
+  },
+  "contacts": {
+    "heading": "Контакти",
+    "text": "Якщо у вас є запитання або вам потрібна допомога, будь ласка, зв'яжіться з нами за наведеними нижче контактами.",
+    "email": {
+      "name": "Email",
+      "value": "{{COMPANY_EMAIL}}"
+    },
+    "phone1": {
+      "name": "Phone",
+      "value": "{{COMPANY_PHONE_1}}"
+    },
+    "phone2": {
+      "name": "Phone",
+      "value": "{{COMPANY_PHONE_2}}"
+    },
+    "address": {
+      "name": "Address",
+      "value": "вул. Свободи, 15, м. Харків, Харківська область, 987654, Україна"
+    }
+  },
+  "socials": {
+    "telegram": {
+      "name": "Telegram",
+      "value": "{{COMPANY_TELEGRAM_LINK}}",
+      "text": "{{COMPANY_TELEGRAM}}"
+    },
+    "facebook": {
+      "name": "Facebook",
+      "value": "{{COMPANY_FACEBOOK}}"
+    },
+    "youtube": {
+      "name": "YouTube",
+      "value": "{{COMPANY_YOUTUBE}}"
+    }
   }
 }

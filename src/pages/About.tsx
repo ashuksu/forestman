@@ -1,6 +1,7 @@
 import {Container} from "~/components/layout/Container";
 import PageMeta from '~/components/PageMeta';
 import {useTranslation} from 'react-i18next';
+import Contacts from "~/components/Contacts";
 
 export default function About() {
     const {t} = useTranslation();
@@ -14,6 +15,18 @@ export default function About() {
                     <h1 className="text-4xl font-bold mb-4">{t('aboutPage.heading')}</h1>
                     <p className="text-lg text-center text-gray-700 max-w-2xl mx-auto">{t('aboutPage.text')}</p>
                     {/* TODO: Create the About page content */}
+                </div>
+            </Container>
+            <Container className="py-8">
+                <div className="flex gap-4">
+                    <div className="flex-1/2">
+                        <h2 className="text-2xl font-bold mb-2">{t('contacts.heading')}</h2>
+                        <p className="text-lg text-gray-700 mb-4">{t('contacts.text')}</p>
+                        <Contacts/>
+                    </div>
+                    <div className="flex-1/2">
+                        {/*TODO: add a feedback form*/}
+                    </div>
                 </div>
             </Container>
         </>
