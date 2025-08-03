@@ -4,6 +4,7 @@ import Footer from '~/components/layout/Footer.tsx';
 import {useTranslation} from 'react-i18next';
 import {useEffect} from 'react';
 import {BASE_PATH} from '~/config/constants';
+import ScrollToTop from '~/components/ScrollToTop';
 
 function RedirectHandler() {
     const navigate = useNavigate();
@@ -22,7 +23,7 @@ function RedirectHandler() {
                 pathAfterBase = '/' + pathAfterBase;
             }
 
-            navigate(pathAfterBase, { replace: true });
+            navigate(pathAfterBase, {replace: true});
         }
     }, [navigate, routerBasename]);
 
@@ -44,7 +45,8 @@ export default function App() {
             {/*<Html lang={i18n.language}/> TODO: when will react-helmet-async be updated */}
             <Header/>
             <main className="flex-grow">
-                <RedirectHandler />
+                <ScrollToTop/>
+                <RedirectHandler/>
                 <Outlet/>
             </main>
             <Footer/>
