@@ -1,38 +1,44 @@
-import {APP_PATH} from "~/config/constants";
-import {Link, useLocation, useNavigate} from "react-router-dom";
-import {useTranslation} from "react-i18next";
+import {APP_PATH} from '~/config/constants';
+import {useNavigate} from 'react-router-dom';
+import {useTranslation} from 'react-i18next';
+
+const anchorMap: Record<string, string> = {
+    'contacts-section': APP_PATH,
+    // 'example-section': `${APP_PATH}pageLink`
+};
 
 export default function Navigation() {
     const {t} = useTranslation();
-    const location = useLocation();
     const navigate = useNavigate();
 
-    const handleContactsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        const contactsSectionId = 'contacts-section';
+    const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        const href = e.currentTarget.getAttribute('href') ?? '';
+        const anchorId = href.replace('#', '');
 
-        const isOnHomePageOrAboutPage = location.pathname === APP_PATH || location.pathname === `${APP_PATH}about`;
+        if (!anchorId) return;
 
-        if (isOnHomePageOrAboutPage) {
+        const section = document.getElementById(anchorId);
+
+        if (section) {
             e.preventDefault();
-            const section = document.getElementById(contactsSectionId);
-
-            if (section) {
-                section.scrollIntoView({behavior: 'smooth', block: 'start'});
-            } else {
-                console.warn(`Section with ID ${contactsSectionId} not found on current page.`);
-                navigate(`${APP_PATH}#${contactsSectionId}`);
-            }
+            section.scrollIntoView({behavior: 'smooth', block: 'start'});
         } else {
-            navigate(`${APP_PATH}#${contactsSectionId}`);
+            const targetPath = anchorMap[anchorId];
+
+            if (targetPath) {
+                navigate(`${targetPath}#${anchorId}`);
+            } else {
+                console.warn(`Anchor ID "${anchorId}" not found in anchorMap.`);
+            }
         }
     };
 
     return (
         <>
             <nav className="flex items-center space-x-6 text-sm font-medium">
-                <Link to={`${APP_PATH}catalog`} className="hover:underline">{t('header.catalogLink')}</Link>
-                <Link to={`${APP_PATH}about`} className="hover:underline">{t('header.aboutLink')}</Link>
-                <a href={`#contacts-section`} onClick={handleContactsClick} className="hover:underline">
+                <a href={`${APP_PATH}catalog`} className="hover:underline">{t('header.catalogLink')}</a>
+                <a href={`${APP_PATH}about`} className="hover:underline">{t('header.aboutLink')}</a>
+                <a href="#contacts-section" onClick={handleAnchorClick} className="hover:underline">
                     {t('contacts.heading')}
                 </a>
             </nav>
