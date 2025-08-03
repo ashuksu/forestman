@@ -1,14 +1,36 @@
 import {Container} from "~/components/layout/Container";
 import {APP_PATH} from "~/config/constants";
-import {Link} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 import logo from '~/assets/images/logo.svg';
 import {useTranslation} from "react-i18next";
 
 export default function Header() {
     const {t, i18n} = useTranslation();
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const changeLanguage = (lng: string) => {
         i18n.changeLanguage(lng);
+    };
+
+    const handleContactsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        const contactsSectionId = 'contacts-section';
+
+        const isOnHomePageOrAboutPage = location.pathname === APP_PATH || location.pathname === `${APP_PATH}about`;
+
+        if (isOnHomePageOrAboutPage) {
+            e.preventDefault();
+            const section = document.getElementById(contactsSectionId);
+
+            if (section) {
+                section.scrollIntoView({behavior: 'smooth', block: 'start'});
+            } else {
+                console.warn(`Section with ID ${contactsSectionId} not found on current page.`);
+                navigate(`${APP_PATH}#${contactsSectionId}`);
+            }
+        } else {
+            navigate(`${APP_PATH}#${contactsSectionId}`);
+        }
     };
 
     return (
@@ -23,7 +45,9 @@ export default function Header() {
                     <nav className="flex items-center space-x-6 text-sm font-medium">
                         <Link to={`${APP_PATH}catalog`} className="hover:underline">{t('header.catalogLink')}</Link>
                         <Link to={`${APP_PATH}about`} className="hover:underline">{t('header.aboutLink')}</Link>
-                        <Link to={`#contacts`} className="hover:underline">{t('contacts.heading')}</Link>
+                        <a href={`#contacts-section`} onClick={handleContactsClick} className="hover:underline">
+                            {t('contacts.heading')}
+                        </a>
                     </nav>
 
                     <div className="flex space-x-2">
