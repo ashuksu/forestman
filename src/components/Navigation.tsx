@@ -1,6 +1,7 @@
 import {APP_PATH} from '~/config/constants';
 import {useNavigate} from 'react-router-dom';
 import {useTranslation} from 'react-i18next';
+import {Link} from "react-router-dom";
 
 const anchorMap: Record<string, string> = {
     'contacts-section': APP_PATH,
@@ -36,8 +37,8 @@ export default function Navigation() {
     return (
         <>
             <nav className="flex items-center space-x-6 text-sm font-medium">
-                <a href={`${APP_PATH}catalog`} className="hover:underline">{t('header.catalogLink')}</a>
-                <a href={`${APP_PATH}about`} className="hover:underline">{t('header.aboutLink')}</a>
+                <Link to={`${APP_PATH}catalog`} className="hover:underline">{t('header.catalogLink')}</Link>
+                <Link to={`${APP_PATH}about`} className="hover:underline">{t('header.aboutLink')}</Link>
                 <a href="#contacts-section" onClick={handleAnchorClick} className="hover:underline">
                     {t('contacts.heading')}
                 </a>
