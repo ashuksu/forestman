@@ -23,6 +23,7 @@ export default function Header() {
                     <nav className="flex items-center space-x-6 text-sm font-medium">
                         <Link to={`${APP_PATH}catalog`} className="hover:underline">{t('header.catalogLink')}</Link>
                         <Link to={`${APP_PATH}about`} className="hover:underline">{t('header.aboutLink')}</Link>
+                        <Link to={`#contacts`} className="hover:underline">{t('contacts.heading')}</Link>
                     </nav>
 
                     <div className="flex space-x-2">

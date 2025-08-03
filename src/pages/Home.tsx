@@ -2,6 +2,7 @@ import {Container} from '~/components/layout/Container';
 import BannerSlider from "~/components/layout/BannerSlider";
 import PageMeta from '~/components/PageMeta';
 import {useTranslation} from 'react-i18next';
+import ContactsSection from "~/components/layout/ContactsSection.tsx";
 
 export default function Home() {
     const {t} = useTranslation();
@@ -15,13 +16,17 @@ export default function Home() {
                 <BannerSlider/>
             </section>
 
-            <Container className="py-8">
-                <section className="flex min-h-80 items-center justify-center flex-col text-center">
-                    <h1 className="text-4xl font-bold mb-4">{t('homePage.welcomeHeading')}</h1>
-                    <p className="text-lg text-center text-gray-700">{t('homePage.welcomeText')}</p>
-                    {/* TODO: Create the Home page content */}
-                </section>
-            </Container>
+            <section id="next-section">
+                <Container className="py-8">
+                    <div className="flex min-h-80 items-center justify-center flex-col text-center">
+                        <h1 className="text-4xl font-bold mb-4">{t('homePage.welcomeHeading')}</h1>
+                        <p className="text-lg text-center text-gray-700">{t('homePage.welcomeText')}</p>
+                        {/* TODO: Create the Home page content */}
+                    </div>
+                </Container>
+            </section>
+
+            <ContactsSection/>
         </>
     );
 }
