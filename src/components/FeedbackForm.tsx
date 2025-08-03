@@ -21,9 +21,7 @@ export default function FeedbackForm() {
     const {t} = useTranslation();
     const [form, setForm] = useState<FormData>(initialData);
     const [errors, setErrors] = useState<Partial<FormData>>({});
-    const [submitted, setSubmitted] = useState(false);
-    const [isSuccessMessageVisible, setIsSuccessMessageVisible] = useState(false);
-    const [successMessageOpacity, setSuccessMessageOpacity] = useState('opacity-0');
+    const [successMessage, setSuccessMessage] = useState<string | undefined>(undefined);
     const messageRef = useRef<HTMLTextAreaElement>(null);
     const isInitialMount = useRef(true);
 
@@ -48,28 +46,17 @@ export default function FeedbackForm() {
     }, [form]);
 
     useEffect(() => {
-        let fadeOutTimer: number;
-        let removeMessageTimer: number;
-
-        if (submitted) {
-            setIsSuccessMessageVisible(true);
-            setSuccessMessageOpacity('opacity-100');
-
-            fadeOutTimer = setTimeout(() => {
-                setSuccessMessageOpacity('opacity-0');
-            }, 5000); // Start fading out after 5 seconds
-
-            removeMessageTimer = setTimeout(() => {
-                setIsSuccessMessageVisible(false);
-                setSubmitted(false);
-            }, 5500); // Remove from DOM after fade-out (5s + 0.5s transition)
+        let timer: number;
+        if (successMessage) {
+            timer = setTimeout(() => {
+                setSuccessMessage(undefined);
+            }, 5000);
         }
 
         return () => {
-            clearTimeout(fadeOutTimer);
-            clearTimeout(removeMessageTimer);
+            clearTimeout(timer);
         };
-    }, [submitted]);
+    }, [successMessage]);
 
     const validate = () => {
         const newErrors: Partial<FormData> = {};
@@ -92,24 +79,20 @@ export default function FeedbackForm() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // Clear any lingering success message visibility or opacity
-        setIsSuccessMessageVisible(false);
-        setSuccessMessageOpacity('opacity-0');
-        setSubmitted(false);
+        setSuccessMessage(undefined);
 
         if (!validate()) {
-            messageRef.current?.focus();
             return;
         }
 
         console.log('Sending...', form);
-        setSubmitted(true); // This will trigger the success message useEffect
+        setSuccessMessage(t('form.success'));
         localStorage.removeItem(STORAGE_KEY);
         setForm(initialData);
     };
 
     return (
-        <form onSubmit={handleSubmit} noValidate className="space-y-4 bg-white p-4 rounded-lg shadow-md">
+        <form onSubmit={handleSubmit} noValidate className="bg-white p-4 pb-3 rounded-lg shadow-md">
             <div>
                 <label htmlFor="name" className="block font-medium mb-1">{t('form.name')}</label>
                 <input
@@ -125,7 +108,9 @@ export default function FeedbackForm() {
                     maxLength={100}
                     required
                 />
-                <FormMessage message={errors.name} />
+                <div className="h-5 pt-0.5">
+                    <FormMessage message={errors.name} type="error"/>
+                </div>
             </div>
 
             <div>
@@ -142,7 +127,9 @@ export default function FeedbackForm() {
                     })}
                     required
                 />
-                <FormMessage message={errors.email} />
+                <div className="h-5 pt-0.5">
+                    <FormMessage message={errors.email} type="error"/>
+                </div>
             </div>
 
             <div>
@@ -161,18 +148,17 @@ export default function FeedbackForm() {
                     ref={messageRef}
                     required
                 />
-                <FormMessage message={errors.message} />
+                <div className="h-7 -mt-1">
+                    <FormMessage message={errors.message} type="error"/>
+                </div>
             </div>
 
             <button type="submit" className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">
                 {t('form.submit')}
             </button>
-
-            {isSuccessMessageVisible && (
-                <p className={clsx("text-green-600 mt-2 transition-opacity duration-500", successMessageOpacity)}>
-                    {t('form.success')}
-                </p>
-            )}
+            <div className="h-5 pt-2">
+                <FormMessage message={successMessage} type="success"/>
+            </div>
         </form>
     );
 }
