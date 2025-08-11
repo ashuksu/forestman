@@ -109,8 +109,8 @@
       "invalidEmail": "Please enter a valid email address"
     }
   },
-  "introSection": {
-    "introTitle": "Our Mission",
+  "infoSection": {
+    "infoTitle": "Our Mission",
     "card1Title": "Quality and Craftsmanship",
     "card1Text": "Every piece is a testament to the skill and dedication of our artisans, ensuring exceptional quality and unique design.",
     "card2Title": "Sustainable Materials",
