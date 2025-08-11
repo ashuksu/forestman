@@ -6,8 +6,8 @@ export default function ContactsSection() {
     const {t} = useTranslation();
 
     return (
-        <section id="contacts-section">
-            <div className="container-section py-15 lg:pb-25">
+        <section id="contacts-section" className="py-16 lg:pb-25">
+            <div className="container-section">
                 <div id="contacts" className="flex flex-col-reverse lg:flex-row justify-center gap-x-6 gap-y-20">
                     <div className="flex-1 lg:flex-1/2 max-w-xl mx-auto lg:mx-0">
                         <h2 className="text-2xl font-bold mb-2">{t('contacts.heading')}</h2>
