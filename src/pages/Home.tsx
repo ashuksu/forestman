@@ -2,7 +2,8 @@ import {Container} from '~/components/layout/Container';
 import BannerSlider from "~/components/layout/BannerSlider";
 import PageMeta from '~/components/PageMeta';
 import {useTranslation} from 'react-i18next';
-import ContactsSection from "~/components/layout/ContactsSection.tsx";
+import ContactsSection from '~/components/layout/ContactsSection';
+import IntroSection from '~/components/IntroSection';
 
 export default function Home() {
     const {t} = useTranslation();
@@ -25,6 +26,8 @@ export default function Home() {
                     </div>
                 </Container>
             </section>
+
+            <IntroSection/>
 
             <ContactsSection/>
         </>
