@@ -108,5 +108,14 @@
       "required": "This field is required",
       "invalidEmail": "Please enter a valid email address"
     }
+  },
+  "introSection": {
+    "introTitle": "Our Mission",
+    "card1Title": "Quality and Craftsmanship",
+    "card1Text": "Every piece is a testament to the skill and dedication of our artisans, ensuring exceptional quality and unique design.",
+    "card2Title": "Sustainable Materials",
+    "card2Text": "We are committed to using responsibly sourced, eco-friendly wood to protect our forests and the planet.",
+    "card3Title": "Customer Satisfaction",
+    "card3Text": "Your happiness is our priority. We work closely with you to create custom pieces that meet your exact vision and needs."
   }
 }
