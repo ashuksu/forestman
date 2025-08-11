@@ -4,19 +4,19 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 import {allTranslations, availableLanguages} from '~/locales';
 import {
-    COMPANY_NAME,
-    COMPANY_SHORT_NAME,
-    WEBSITE_URL,
-    PROJECT_AUTHOR,
-    PROJECT_AUTHOR_URL,
-    PROJECT_AUTHOR_EMAIL,
     COMPANY_EMAIL,
+    COMPANY_FACEBOOK,
+    COMPANY_NAME,
     COMPANY_PHONE_1,
     COMPANY_PHONE_2,
+    COMPANY_SHORT_NAME,
     COMPANY_TELEGRAM,
     COMPANY_TELEGRAM_LINK,
-    COMPANY_FACEBOOK,
-    COMPANY_YOUTUBE
+    COMPANY_YOUTUBE,
+    PROJECT_AUTHOR,
+    PROJECT_AUTHOR_EMAIL,
+    PROJECT_AUTHOR_URL,
+    WEBSITE_URL
 } from '~/config/constants';
 
 const YEAR = new Date().getFullYear();

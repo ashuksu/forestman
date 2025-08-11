@@ -1,7 +1,6 @@
 import {APP_PATH} from '~/config/constants';
-import {useNavigate} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import {useTranslation} from 'react-i18next';
-import {Link} from "react-router-dom";
 
 const anchorMap: Record<string, string> = {
     'contacts-section': APP_PATH,
