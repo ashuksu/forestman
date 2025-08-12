@@ -3,6 +3,9 @@
 :root {
 	--background: #ffffff;
 	--foreground: #213547;
+	--primary: #bb5931;
+	--primary-hover: #964727;
+	--secondary: #3A6F5E;
 
 	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
