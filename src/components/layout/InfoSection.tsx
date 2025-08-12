@@ -1,5 +1,5 @@
 import {useTranslation} from 'react-i18next';
-import InfoCard from '~/components/ui/InfoCard.tsx';
+import InfoCard from '~/components/ui/InfoCard';
 import Icon1 from '~/assets/images/icons/1.png';
 import Icon2 from '~/assets/images/icons/2.png';
 import Icon3 from '~/assets/images/icons/3.png';
@@ -26,7 +26,7 @@ export default function InfoSection() {
     ];
 
     return (
-        <section id="info" className="py-16 bg-[#f9f9f7]">
+        <section id="info-section" className="py-16 bg-[#f9f9f7]">
             <div className="container-section">
                 <h2 className="text-3xl md:text-4xl text-center font-bold mb-8">
                     {t('infoSection.infoTitle')}
