@@ -9,7 +9,7 @@ export interface InfoCardProps {
 export default function InfoCard({icon, title, text}: InfoCardProps) {
     return (
         <div
-            className="flex flex-col justify-between w-full max-w-xl md:w-1/3 bg-white p-6 pb-7 rounded-lg shadow-md min-h-[240px] md:min-h-[300px]">
+            className="flex flex-col justify-between w-full max-w-xl md:w-1/3 bg-white p-6 pb-7 rounded-xl shadow-md min-h-[240px] md:min-h-[300px]">
             <div>
                 <div className="flex items-start gap-3 mb-4">
                     {icon}

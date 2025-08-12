@@ -4,7 +4,7 @@ export default function Footer() {
     const {t} = useTranslation();
 
     return (
-        <footer className="border-t">
+        <footer className="shadow-[0_-4px_6px_rgba(0,0,0,0.15)]">
             <div
                 className="container-section flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
                 <div
