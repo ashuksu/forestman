@@ -17,6 +17,6 @@ export const COMPANY_FACEBOOK = 'https://www.facebook.com/example.123123';
 export const COMPANY_YOUTUBE = 'https://www.youtube.com/@123123';
 
 export const WEBSITE_URL = 'https://yourwebsite.com/';
-// export const BASE_PATH = `/${PROJECT_NAME}`;
+// export const BASE_PATH = `/${PROJECT_NAME}/`;
 export const BASE_PATH = '/';
 export const APP_PATH = '/';
