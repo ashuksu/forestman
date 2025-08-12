@@ -28,7 +28,7 @@ export default function InfoSection() {
     ];
 
     return (
-        <section id="info-section" className="py-16 bg-[#f9f9f7]">
+        <section id="info-section" className="py-16 bg-[var(--secondary)]">
             <Container>
                 <Title className="text-center mb-8">{t('infoSection.infoTitle')}</Title>
 
