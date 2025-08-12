@@ -1,4 +1,5 @@
 import {useTranslation} from 'react-i18next';
+import Container from '~/components/layout/Container';
 import Title from '~/components/ui/Title';
 import Contacts from '~/components/Contacts';
 import FeedbackForm from '~/components/FeedbackForm';
@@ -8,7 +9,7 @@ export default function ContactsSection() {
 
     return (
         <section id="contacts-section" className="py-16 lg:pb-20">
-            <div className="container-section">
+            <Container>
                 <div id="contacts" className="flex flex-col-reverse lg:flex-row justify-center gap-x-6 gap-y-16">
                     <div className="flex-1 lg:flex-1/2 max-w-xl mx-auto lg:mx-0">
                         <Title>{t('contacts.heading')}</Title>
@@ -27,7 +28,7 @@ export default function ContactsSection() {
                         <FeedbackForm/>
                     </div>
                 </div>
-            </div>
+            </Container>
         </section>
     );
 }
