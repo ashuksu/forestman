@@ -1,4 +1,5 @@
 import {useTranslation} from 'react-i18next';
+import Title from '~/components/ui/Title';
 import Contacts from '~/components/Contacts';
 import FeedbackForm from '~/components/FeedbackForm';
 
@@ -10,14 +11,19 @@ export default function ContactsSection() {
             <div className="container-section">
                 <div id="contacts" className="flex flex-col-reverse lg:flex-row justify-center gap-x-6 gap-y-16">
                     <div className="flex-1 lg:flex-1/2 max-w-xl mx-auto lg:mx-0">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('contacts.heading')}</h2>
+                        <Title>{t('contacts.heading')}</Title>
+
                         <p className="text-lg text-gray-700 mb-4">{t('contacts.text')}</p>
+
                         <Contacts/>
+
                         <p className="text-lg text-gray-700 mt-6 whitespace-pre-line">{t('contacts.contactNote')}</p>
                     </div>
                     <div className="flex-1 lg:flex-1/2 max-w-xl mx-auto lg:mx-0">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('form.heading')}</h2>
+                        <Title>{t('form.heading')}</Title>
+
                         <p className="text-lg text-gray-700 mb-4">{t('form.text')}</p>
+
                         <FeedbackForm/>
                     </div>
                 </div>
