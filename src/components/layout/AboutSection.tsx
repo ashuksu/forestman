@@ -8,7 +8,7 @@ export default function AboutSection() {
 
     return (
         <section id="about-section" className="pt-16 pb-12 md:pb-16">
-            <div className="w-full max-w-[95rem] mx-auto px-4 md:px-0 flex flex-col md:flex-row items-center md:items-stretch gap-6">
+            <div className="w-full max-w-[var(--2xl)] mx-auto px-4 md:px-0 flex flex-col md:flex-row items-center md:items-stretch gap-6">
                 <div className="w-full md:w-1/2">
                     <img
                         src={Image}
