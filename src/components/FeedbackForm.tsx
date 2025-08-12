@@ -2,6 +2,7 @@ import {useEffect, useRef, useState} from 'react';
 import {useTranslation} from 'react-i18next';
 import clsx from 'clsx';
 import FormMessage from '~/components/ui/FormMessage';
+import Button from '~/components/ui/Button';
 
 const STORAGE_KEY = 'contact_form';
 
@@ -92,7 +93,7 @@ export default function FeedbackForm() {
     };
 
     return (
-        <form onSubmit={handleSubmit} noValidate className="bg-white p-4 pb-3 rounded-lg shadow-md">
+        <form onSubmit={handleSubmit} noValidate className="bg-white p-4 pb-3 rounded-xl shadow-md">
             <div>
                 <label htmlFor="name" className="block font-medium mb-1">{t('form.name')}</label>
                 <input
@@ -101,7 +102,7 @@ export default function FeedbackForm() {
                     value={form.name}
                     onChange={e => setForm({...form, name: e.target.value})}
                     onFocus={() => handleFocus('name')}
-                    className={clsx("w-full p-2 border rounded", {
+                    className={clsx("w-full p-2 border rounded-lg", {
                         'border-red-500': errors.name,
                         'border-gray-300': !errors.name
                     })}
@@ -121,7 +122,7 @@ export default function FeedbackForm() {
                     value={form.email}
                     onChange={e => setForm({...form, email: e.target.value})}
                     onFocus={() => handleFocus('email')}
-                    className={clsx("w-full p-2 border rounded", {
+                    className={clsx("w-full p-2 border rounded-lg", {
                         'border-red-500': errors.email,
                         'border-gray-300': !errors.email
                     })}
@@ -139,7 +140,7 @@ export default function FeedbackForm() {
                     value={form.message}
                     onChange={e => setForm({...form, message: e.target.value})}
                     onFocus={() => handleFocus('message')}
-                    className={clsx("w-full p-2 border rounded resize-none", {
+                    className={clsx("w-full p-2 border rounded-lg resize-none", {
                         'border-red-500': errors.message,
                         'border-gray-300': !errors.message
                     })}
@@ -153,9 +154,8 @@ export default function FeedbackForm() {
                 </div>
             </div>
 
-            <button type="submit" className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">
-                {t('form.submit')}
-            </button>
+            <Button type="submit">{t("form.submit")}</Button>
+
             <div className="h-5 pt-2">
                 <FormMessage message={successMessage} type="success"/>
             </div>
