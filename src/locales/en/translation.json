@@ -117,5 +117,11 @@
     "card2Text": "We are committed to using responsibly sourced, eco-friendly wood to protect our forests and the planet.",
     "card3Title": "Customer Satisfaction",
     "card3Text": "Your happiness is our priority. We work closely with you to create custom pieces that meet your exact vision and needs."
+  },
+  "aboutSection": {
+    "heading": "About Us",
+    "text": "{{common.companyFullName}} is more than just a workshop where wooden products are made; it's a space where ideas come to life and wood is transformed into art. Every item is handcrafted with love and attention to detail. We believe that true beauty lies in the uniqueness and naturalness of the material. We offer unique solutions for your home that will add comfort and warmth. Join us on a journey through the world of woodcraft.",
+    "buttonText": "Learn More",
+    "imageAlt": "A craftsman working on a wooden product"
   }
 }
