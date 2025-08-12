@@ -4,6 +4,7 @@ import Container from '~/components/layout/Container';
 import BannerSlider from '~/components/layout/BannerSlider';
 import ContactsSection from '~/components/layout/ContactsSection';
 import AboutSection from '~/components/layout/AboutSection';
+import CatalogSection from '~/components/layout/CatalogSection';
 import InfoSection from '~/components/layout/InfoSection';
 
 export default function Home() {
@@ -32,6 +33,8 @@ export default function Home() {
             <AboutSection/>
 
             <InfoSection/>
+
+            <CatalogSection/>
 
             <ContactsSection/>
         </>
