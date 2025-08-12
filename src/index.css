@@ -34,5 +34,5 @@ body {
 }
 
 .container-section {
-	@apply w-full max-w-[1400px] mx-auto px-4;
+	@apply w-full max-w-[95rem] mx-auto px-4;
 }
