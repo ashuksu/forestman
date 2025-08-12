@@ -1,5 +1,5 @@
 import {useTranslation} from 'react-i18next';
-import InfoCard from '~/components/ui/InfoCard';
+import InfoCard from '~/components/ui/InfoCard.tsx';
 import Icon1 from '~/assets/images/icons/1.png';
 import Icon2 from '~/assets/images/icons/2.png';
 import Icon3 from '~/assets/images/icons/3.png';

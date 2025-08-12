@@ -2,7 +2,7 @@ import BannerSlider from '~/components/layout/BannerSlider';
 import PageMeta from '~/components/PageMeta';
 import {useTranslation} from 'react-i18next';
 import ContactsSection from '~/components/layout/ContactsSection';
-import InfoSection from '~/components/InfoSection.tsx';
+import InfoSection from '~/components/layout/InfoSection.tsx';
 
 export default function Home() {
     const {t} = useTranslation();
