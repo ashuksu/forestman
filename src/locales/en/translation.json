@@ -123,5 +123,11 @@
     "text": "{{common.companyFullName}} is more than just a workshop where wooden products are made; it's a space where ideas come to life and wood is transformed into art. Every item is handcrafted with love and attention to detail. We believe that true beauty lies in the uniqueness and naturalness of the material. We offer unique solutions for your home that will add comfort and warmth. Join us on a journey through the world of woodcraft.",
     "buttonText": "Learn More",
     "imageAlt": "A craftsman working on a wooden product"
+  },
+  "catalogSection": {
+    "heading": "Our Catalog",
+    "text": "Discover our diverse catalog of handcrafted wooden products. From elegant home decor to functional kitchenware and unique gifts, each piece is crafted with the highest quality and care. Our collection showcases the natural beauty of wood, with a variety of finishes and designs to suit any taste. Whether you’re looking for a special item for yourself or a thoughtful gift for a loved one, you’ll find something truly special here. Explore our creations and find the perfect wooden piece to add warmth and character to your space. Click the button below to see the full collection.",
+    "buttonText": "Explore Catalog",
+    "imageAlt": "A grid of different wooden products"
   }
 }
