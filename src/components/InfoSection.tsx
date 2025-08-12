@@ -36,7 +36,7 @@ export default function InfoSection() {
                     {infoCardsData.map((card, index) => (
                         <InfoCard
                             key={index}
-                            icon={<img src={card.icon} alt={`Icon ${index + 1}`} className="w-8 h-8"/>}
+                            icon={<img src={card.icon} alt={`Icon ${index + 1}`} className="w-8 h-8 object-contain"/>}
                             title={t(card.titleKey)}
                             text={t(card.textKey)}
                         />
