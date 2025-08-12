@@ -2,7 +2,8 @@ import BannerSlider from '~/components/layout/BannerSlider';
 import PageMeta from '~/components/PageMeta';
 import {useTranslation} from 'react-i18next';
 import ContactsSection from '~/components/layout/ContactsSection';
-import InfoSection from '~/components/layout/InfoSection.tsx';
+import AboutSection from '~/components/layout/AboutSection';
+import InfoSection from '~/components/layout/InfoSection';
 
 export default function Home() {
     const {t} = useTranslation();
@@ -12,6 +13,7 @@ export default function Home() {
             <PageMeta pageKey="homePage" pagePath=""/>
 
             <section
+                id="banner-slider-section"
                 className="banner-slider container w-full max-w-[1920px] mx-auto mb-4 landscape:-mt-10 landscape:sm:-mt-12 landscape:lg:-mt-15 sm:-mt-12 lg:-mt-15">
                 <BannerSlider/>
             </section>
@@ -25,6 +27,8 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
+            <AboutSection/>
 
             <InfoSection/>
 
