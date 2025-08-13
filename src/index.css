@@ -39,3 +39,22 @@ body {
 	margin: 0;
 	min-height: 100vh;
 }
+
+.limited-text {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	-webkit-line-clamp: var(--lines, 1);
+}
+
+.limited-text-2 {
+	--lines: 2;
+}
+
+.limited-text-4 {
+	--lines: 4;
+}
+
+.limited-text-6 {
+	--lines: 6;
+}
