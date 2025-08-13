@@ -4,7 +4,7 @@ import Button from '~/components/ui/Button';
 import {BASE_PATH} from '~/config/constants';
 import Image from '~/assets/images/pictute2.jpeg';
 
-export default function AboutSection() {
+export default function CatalogSection() {
     const {t} = useTranslation();
 
     return (

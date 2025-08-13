@@ -5,7 +5,7 @@ import BannerSlider from '~/components/layout/BannerSlider';
 import ContactsSection from '~/components/layout/ContactsSection';
 import AboutSection from '~/components/layout/AboutSection';
 import CatalogSection from '~/components/layout/CatalogSection';
-import IframeMapSection from '~/components/layout/IframeMapSection.tsx';
+import IframeMapSection from '~/components/layout/IframeMapSection';
 import InfoSection from '~/components/layout/InfoSection';
 
 export default function Home() {
