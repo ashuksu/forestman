@@ -110,13 +110,19 @@
     }
   },
   "infoSection": {
-    "infoTitle": "Our Mission",
-    "card1Title": "Quality and Craftsmanship",
-    "card1Text": "Every piece is a testament to the skill and dedication of our artisans, ensuring exceptional quality and unique design.",
-    "card2Title": "Sustainable Materials",
-    "card2Text": "We are committed to using responsibly sourced, eco-friendly wood to protect our forests and the planet.",
-    "card3Title": "Customer Satisfaction",
-    "card3Text": "Your happiness is our priority. We work closely with you to create custom pieces that meet your exact vision and needs."
+    "heading": "Our Mission",
+    "card1": {
+      "title": "Quality and Craftsmanship",
+      "text": "Every piece is a testament to the skill and dedication of our artisans, ensuring exceptional quality and unique design."
+    },
+    "card2": {
+      "title": "Sustainable Materials",
+      "text": "We are committed to using responsibly sourced, eco-friendly wood to protect our forests and the planet."
+    },
+    "card3": {
+      "title": "Customer Satisfaction",
+      "text": "Your happiness is our priority. We work closely with you to create custom pieces that meet your exact vision and needs."
+    }
   },
   "aboutSection": {
     "heading": "About Us",
