@@ -2,7 +2,7 @@ import {useTranslation} from 'react-i18next';
 import Title from '~/components/ui/Title';
 import Button from '~/components/ui/Button';
 import {BASE_PATH} from '~/config/constants';
-import Image from '@images/pictute2-400.webp';
+import Image from '~/components/ui/Image';
 
 export default function CatalogSection() {
     const {t} = useTranslation();
@@ -23,11 +23,12 @@ export default function CatalogSection() {
                     </Button>
                 </div>
                 <div className="w-full md:w-1/2">
-                    <img
-                        src={Image}
+                    <Image
+                        src="pictute2.jpeg"
                         alt={t('catalogSection.imageAlt')}
-                        loading="lazy"
-                        className="w-full h-auto md:h-full object-cover rounded-xl md:rounded-r-none 2xl:rounded-xl shadow-md"
+                        width={330}
+                        height={220}
+                        className="w-full md:h-full object-cover rounded-xl md:rounded-r-none 2xl:rounded-xl shadow-md"
                     />
                 </div>
             </div>
