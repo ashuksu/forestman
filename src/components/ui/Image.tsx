@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useMemo} from 'react';
 import {imageConfig} from '~/config/image.config';
+import clsx from 'clsx';
 
 const allImages = import.meta.glob('/src/assets/images-build/**/*.{jpg,jpeg,png,webp,svg,gif}', {
     eager: true,
@@ -8,11 +9,20 @@ const allImages = import.meta.glob('/src/assets/images-build/**/*.{jpg,jpeg,png,
 });
 
 const isAllowedExternalUrl = (url: string): boolean => {
+    if (!/^https?:\/\//i.test(url)) {
+        return false;
+    }
     try {
         const urlObject = new URL(url);
-        return imageConfig.allowedDomains.includes(urlObject.hostname);
+        const result = imageConfig.allowedDomains.includes(urlObject.hostname);
+
+        if (!result) {
+            console.error('Domain not allowed:', urlObject.hostname);
+        }
+
+        return result;
     } catch (e) {
-        console.error('Invalid URL in isAllowedExternalUrl:', e);
+        console.error('Invalid URL in isAllowedExternalUrl:', e, url);
         return false;
     }
 };
@@ -41,6 +51,8 @@ const Image: React.FC<ImageProps> = ({
         setError(false);
     }, [src]);
 
+    const {className, ...restProps} = props;
+
     const imageSources = useMemo(() => {
         if (!src || isAllowedExternalUrl(src)) {
             return {
@@ -58,7 +70,7 @@ const Image: React.FC<ImageProps> = ({
         const [, dir = '', filename, ext] = pathInfo;
 
         if (imageConfig.skipProcessing.includes(ext.toLowerCase())) {
-            const imagePath = `/src/assets/images-build/${dir}${filename}.${ext}`;
+            const imagePath = `/${imageConfig.paths.dest}/${dir}${filename}.${ext}`;
             return {
                 src: (allImages[imagePath] ?? imageConfig.brokenImage) as string,
                 srcset: undefined,
@@ -68,12 +80,12 @@ const Image: React.FC<ImageProps> = ({
 
         const srcsetEntries = imageConfig.sizes
             .map(size => {
-                const webpPath = `/src/assets/images-build/${dir}${filename}-${size}.webp`;
+                const webpPath = `/${imageConfig.paths.dest}/${dir}${filename}-${size}.webp`;
                 return allImages[webpPath] ? `${allImages[webpPath]} ${size}w` : null;
             })
             .filter(Boolean);
 
-        const fallbackPath = `/src/assets/images-build/${dir}${filename}-${imageConfig.fallbackSize}.${ext}`;
+        const fallbackPath = `/${imageConfig.paths.dest}/${dir}${filename}-${imageConfig.fallbackSize}.${ext}`;
         const fallbackSrc = (allImages[fallbackPath] ?? imageConfig.brokenImage) as string;
 
         return {
@@ -90,21 +102,23 @@ const Image: React.FC<ImageProps> = ({
                 alt="Broken image"
                 width={width}
                 height={height}
-                {...props}
+                className={clsx('max-w-full h-auto object-fill ', className)}
+                {...restProps}
             />
         );
     }
 
     const loadingAttrs: {
         loading?: 'lazy' | 'eager';
-        fetchpriority?: 'high' | 'low' | 'auto';
+        fetchPriority?: 'high' | 'low' | 'auto';
     } = {};
 
     if (!noLazy && fetchpriority !== 'high') {
         loadingAttrs.loading = 'lazy';
     }
+
     if (fetchpriority) {
-        loadingAttrs.fetchpriority = fetchpriority;
+        loadingAttrs.fetchPriority = fetchpriority;
     }
 
     return (
@@ -117,8 +131,9 @@ const Image: React.FC<ImageProps> = ({
             height={height}
             decoding={decoding}
             onError={() => setError(true)}
+            className={clsx('max-w-full h-auto', className)}
             {...loadingAttrs}
-            {...props}
+            {...restProps}
         />
     );
 };
