@@ -9,59 +9,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import cliProgress from 'cli-progress';
 import md5 from 'md5';
-
-interface ImageQualityConfig {
-    webp: Record<number, number>;
-    jpeg: number;
-    png: number;
-}
-
-interface ImagePathsConfig {
-    src: string;
-    dest: string;
-    cache: string;
-}
-
-interface SharpInstanceConfig {
-    limitInputPixels: number | false;
-    fastShrinkOnLoad: boolean;
-}
-
-interface ImagePluginConfig {
-    sizes: number[];
-    fallbackSize: number;
-    quality: ImageQualityConfig;
-    paths: ImagePathsConfig;
-    skipProcessing: string[];
-    processFiles: string[];
-    sharp: SharpInstanceConfig;
-}
-
-/** @type {ImagePluginConfig} */
-const imageConfig: ImagePluginConfig = {
-    sizes: [1200, 800, 400],
-    fallbackSize: 800,
-    quality: {
-        webp: {
-            1200: 85,  // for large: tablets, laptops (DPR=3, DPR=2, Retina, HiDPI)
-            800: 65,  // for medium: tablets, mobile devices (DPR=2, Retina, HiDPI)
-            400: 70  // for small: mobile devices (DPR=1)
-        },
-        jpeg: 75,
-        png: 75
-    },
-    paths: {
-        src: 'src/assets/images-source',
-        dest: 'src/assets/images-build',
-        cache: '.cache'
-    },
-    skipProcessing: ['svg', 'gif', 'webp'],
-    processFiles: ['jpg', 'jpeg', 'png'],
-    sharp: {
-        limitInputPixels: 0,
-        fastShrinkOnLoad: true
-    }
-};
+import {imageConfig} from './src/config/image.config';
 
 /**
  * Recursively gets all original file paths from a directory, excluding generated files.
@@ -232,7 +180,7 @@ export default defineConfig({
     resolve: {
         alias: {
             '@': path.resolve(__dirname, 'src'),
-            '@images': path.resolve(__dirname, 'src/assets/images-build')
+            '@images': path.resolve(__dirname, imageConfig.paths.dest)
         }
     }
 });
