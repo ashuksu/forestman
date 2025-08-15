@@ -103,7 +103,7 @@ const Image: React.FC<ImageProps> = ({
                 alt="Broken image"
                 width={width}
                 height={height}
-                className={clsx('max-w-full h-auto object-fill ', className)}
+                className={clsx('max-w-full h-auto object-fill', className)}
                 {...restProps}
             />
         );
