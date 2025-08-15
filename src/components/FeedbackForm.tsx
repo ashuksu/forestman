@@ -47,7 +47,7 @@ export default function FeedbackForm() {
     }, [form]);
 
     useEffect(() => {
-        let timer: number;
+        let timer: ReturnType<typeof setTimeout>;
         if (successMessage) {
             timer = setTimeout(() => {
                 setSuccessMessage(undefined);
