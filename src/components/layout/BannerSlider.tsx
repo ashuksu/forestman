@@ -4,16 +4,13 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import '~/components/layout/BannerSlider.css'
-
-import banner1 from '@images/banner/banner1-400.webp';
-import banner2 from '@images/banner/banner2-400.webp';
-import banner3 from '@images/banner/banner3-400.webp';
+import Image from "~/components/ui/Image.tsx";
 
 export default function BannerSlider() {
     const images = [
-        {id: 1, src: banner1, alt: 'Banner Image 1'},
-        {id: 2, src: banner2, alt: 'Banner Image 2'},
-        {id: 3, src: banner3, alt: 'Banner Image 3'},
+        {id: 1, src: 'banner/banner1.jpeg', alt: 'Banner Image 1'},
+        {id: 2, src: 'banner/banner2.jpeg', alt: 'Banner Image 2'},
+        {id: 3, src: 'banner/banner3.jpeg', alt: 'Banner Image 3'},
     ];
 
     return (
@@ -38,13 +35,16 @@ export default function BannerSlider() {
                 lazyPreloadPrevNext={1}
                 className="mySwiper h-fit landscape:h-screen w-full  "
             >
-                {images.map((image) => (
+                {images.map((image, index) => (
                     <SwiperSlide key={image.id}>
-                        <img
+                        <Image
                             src={image.src}
                             alt={image.alt}
-                            className="swiper-lazy w-full h-full object-cover"
-                            loading="lazy"
+                            width={450}
+                            height={300}
+                            noLazy={index === 0}
+                            fetchPriority={index === 0 ? "high" : undefined}
+                            className={`${index === 0 ? "" : "swiper-lazy"} w-full h-full object-cover`}
                         />
                         <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     </SwiperSlide>
