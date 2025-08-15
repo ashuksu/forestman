@@ -2,7 +2,7 @@ import {useTranslation} from 'react-i18next';
 import Title from '~/components/ui/Title';
 import Button from '~/components/ui/Button';
 import {BASE_PATH} from '~/config/constants';
-import Image from '~/assets/images/pictute4.jpeg';
+import Image from '@images/pictute4-400.webp';
 
 export default function AboutSection() {
     const {t} = useTranslation();

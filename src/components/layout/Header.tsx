@@ -1,5 +1,5 @@
 import {APP_PATH} from '~/config/constants';
-import logo from '~/assets/images/logo.svg';
+import logo from '@images/logo.svg';
 import Navigation from '~/components/Navigation';
 import {Link} from 'react-router-dom';
 import {useTranslation} from 'react-i18next';

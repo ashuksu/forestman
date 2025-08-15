@@ -5,9 +5,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import '~/components/layout/BannerSlider.css'
 
-import banner1 from '~/assets/images/banner/banner1.jpeg';
-import banner2 from '~/assets/images/banner/banner2.jpeg';
-import banner3 from '~/assets/images/banner/banner3.jpeg';
+import banner1 from '@images/banner/banner1-400.webp';
+import banner2 from '@images/banner/banner2-400.webp';
+import banner3 from '@images/banner/banner3-400.webp';
 
 export default function BannerSlider() {
     const images = [

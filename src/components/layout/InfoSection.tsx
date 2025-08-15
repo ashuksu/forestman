@@ -2,9 +2,9 @@ import {useTranslation} from 'react-i18next';
 import Container from '~/components/layout/Container';
 import Title from '~/components/ui/Title';
 import InfoCard from '~/components/ui/InfoCard';
-import Icon1 from '~/assets/images/icons/1.png';
-import Icon2 from '~/assets/images/icons/2.png';
-import Icon3 from '~/assets/images/icons/3.png';
+import Icon1 from '@images/icons/1.svg';
+import Icon2 from '@images/icons/2.svg';
+import Icon3 from '@images/icons/3.svg';
 
 export default function InfoSection() {
     const {t} = useTranslation();
