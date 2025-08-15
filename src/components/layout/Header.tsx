@@ -1,5 +1,4 @@
 import {APP_PATH} from '~/config/constants';
-import logo from '@images/logo.svg';
 import Navigation from '~/components/Navigation';
 import {Link} from 'react-router-dom';
 import {useTranslation} from 'react-i18next';
@@ -19,7 +18,7 @@ export default function Header() {
             <Container className="flex items-center justify-between space-x-6 h-10 sm:h-12 lg:h-15">
                 <Link to={APP_PATH} className="h-5 lg:h-8 flex items-center">
                     <Image
-                        src={logo}
+                        src="logo.svg"
                         alt="Logo"
                         width={30}
                         height={26}
