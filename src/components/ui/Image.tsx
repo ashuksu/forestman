@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useMemo} from 'react';
-import {imageConfig} from '~/config/image.config';
+import {imageConfig} from '@/config/image.config';
 import clsx from 'clsx';
-import {BASE_PATH} from '~/config/constants';
+import {BASE_PATH} from '@/config/constants';
 
 const allImages = import.meta.glob('/src/assets/images-build/**/*.{jpg,jpeg,png,webp,svg,gif}', {
     eager: true,

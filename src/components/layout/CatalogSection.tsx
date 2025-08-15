@@ -1,8 +1,8 @@
 import {useTranslation} from 'react-i18next';
-import Title from '~/components/ui/Title';
-import Button from '~/components/ui/Button';
-import {BASE_PATH} from '~/config/constants';
-import Image from '~/components/ui/Image';
+import Title from '@/components/ui/Title';
+import Button from '@/components/ui/Button';
+import {BASE_PATH} from '@/config/constants';
+import Image from '@/components/ui/Image';
 
 export default function CatalogSection() {
     const {t} = useTranslation();

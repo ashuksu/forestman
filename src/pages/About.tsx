@@ -1,7 +1,7 @@
-import PageMeta from '~/components/PageMeta';
+import PageMeta from '@/components/PageMeta';
 import {useTranslation} from 'react-i18next';
-import Container from '~/components/layout/Container';
-import ContactsSection from "~/components/layout/ContactsSection";
+import Container from '@/components/layout/Container';
+import ContactsSection from "@/components/layout/ContactsSection";
 
 export default function About() {
     const {t} = useTranslation();

@@ -1,8 +1,8 @@
-import PageMeta from '~/components/PageMeta';
+import PageMeta from '@/components/PageMeta';
 import {useTranslation} from 'react-i18next';
-import Container from '~/components/layout/Container';
-import Button from '~/components/ui/Button';
-import {BASE_PATH} from '~/config/constants';
+import Container from '@/components/layout/Container';
+import Button from '@/components/ui/Button';
+import {BASE_PATH} from '@/config/constants';
 
 export default function Error() {
     const {t} = useTranslation();

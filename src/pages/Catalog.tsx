@@ -1,7 +1,7 @@
-import PageMeta from '~/components/PageMeta';
+import PageMeta from '@/components/PageMeta';
 import {useTranslation} from 'react-i18next';
-import Container from '~/components/layout/Container';
-import ProductCard from '~/components/ProductCard.tsx';
+import Container from '@/components/layout/Container';
+import ProductCard from '@/components/ProductCard.tsx';
 
 export default function Catalog() {
     const {t} = useTranslation();

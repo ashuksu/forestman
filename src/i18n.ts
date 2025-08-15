@@ -2,7 +2,7 @@ import i18n from 'i18next';
 import {initReactI18next} from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-import {allTranslations, availableLanguages} from '~/locales';
+import {allTranslations, availableLanguages} from '@/locales';
 import {
     COMPANY_EMAIL,
     COMPANY_FACEBOOK,
@@ -17,7 +17,7 @@ import {
     PROJECT_AUTHOR_EMAIL,
     PROJECT_AUTHOR_URL,
     WEBSITE_URL
-} from '~/config/constants';
+} from '@/config/constants';
 
 const YEAR = new Date().getFullYear();
 

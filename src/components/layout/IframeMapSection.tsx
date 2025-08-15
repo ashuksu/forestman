@@ -1,6 +1,6 @@
 import {useTranslation} from 'react-i18next';
-import Title from '~/components/ui/Title';
-import Container from '~/components/layout/Container';
+import Title from '@/components/ui/Title';
+import Container from '@/components/layout/Container';
 
 export default function IframeMapSection() {
     const {t} = useTranslation();

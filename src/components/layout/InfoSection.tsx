@@ -1,8 +1,8 @@
 import {useTranslation} from 'react-i18next';
-import Container from '~/components/layout/Container';
-import Title from '~/components/ui/Title';
-import InfoCard from '~/components/ui/InfoCard';
-import Image from '~/components/ui/Image';
+import Container from '@/components/layout/Container';
+import Title from '@/components/ui/Title';
+import InfoCard from '@/components/ui/InfoCard';
+import Image from '@/components/ui/Image';
 
 export default function InfoSection() {
     const {t} = useTranslation();

@@ -1,5 +1,5 @@
 import {useTranslation} from 'react-i18next';
-import Container from '~/components/layout/Container';
+import Container from '@/components/layout/Container';
 
 export default function Footer() {
     const {t} = useTranslation();

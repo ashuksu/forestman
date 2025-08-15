@@ -1,12 +1,12 @@
-import PageMeta from '~/components/PageMeta';
+import PageMeta from '@/components/PageMeta';
 import {useTranslation} from 'react-i18next';
-import Container from '~/components/layout/Container';
-import BannerSlider from '~/components/layout/BannerSlider';
-import ContactsSection from '~/components/layout/ContactsSection';
-import AboutSection from '~/components/layout/AboutSection';
-import CatalogSection from '~/components/layout/CatalogSection';
-import IframeMapSection from '~/components/layout/IframeMapSection';
-import InfoSection from '~/components/layout/InfoSection';
+import Container from '@/components/layout/Container';
+import BannerSlider from '@/components/layout/BannerSlider';
+import ContactsSection from '@/components/layout/ContactsSection';
+import AboutSection from '@/components/layout/AboutSection';
+import CatalogSection from '@/components/layout/CatalogSection';
+import IframeMapSection from '@/components/layout/IframeMapSection';
+import InfoSection from '@/components/layout/InfoSection';
 
 export default function Home() {
     const {t} = useTranslation();

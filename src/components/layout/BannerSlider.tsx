@@ -3,8 +3,8 @@ import {Autoplay, EffectFade, Pagination} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
-import '~/components/layout/BannerSlider.css'
-import Image from "~/components/ui/Image.tsx";
+import '@/components/layout/BannerSlider.css'
+import Image from "@/components/ui/Image.tsx";
 
 export default function BannerSlider() {
     const images = [

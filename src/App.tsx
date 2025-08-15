@@ -1,10 +1,10 @@
 import {Outlet, useNavigate} from 'react-router-dom';
-import Header from '~/components/layout/Header.tsx';
-import Footer from '~/components/layout/Footer.tsx';
+import Header from '@/components/layout/Header.tsx';
+import Footer from '@/components/layout/Footer.tsx';
 import {useTranslation} from 'react-i18next';
 import {useEffect} from 'react';
-import {BASE_PATH} from '~/config/constants';
-import ScrollToTop from '~/components/ScrollToTop';
+import {BASE_PATH} from '@/config/constants';
+import ScrollToTop from '@/components/ScrollToTop';
 
 function RedirectHandler() {
     const navigate = useNavigate();

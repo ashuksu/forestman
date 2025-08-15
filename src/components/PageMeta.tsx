@@ -1,6 +1,6 @@
 import {Meta, Title} from 'react-head';
 import {useTranslation} from 'react-i18next';
-import type {TranslationKey} from '~/locales';
+import type {TranslationKey} from '@/locales';
 
 interface PageMetaProps {
     pageKey: TranslationKey;

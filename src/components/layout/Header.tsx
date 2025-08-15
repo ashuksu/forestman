@@ -1,9 +1,9 @@
-import {APP_PATH} from '~/config/constants';
-import Navigation from '~/components/Navigation';
+import {APP_PATH} from '@/config/constants';
+import Navigation from '@/components/Navigation';
 import {Link} from 'react-router-dom';
 import {useTranslation} from 'react-i18next';
-import Container from '~/components/layout/Container';
-import Image from "~/components/ui/Image.tsx";
+import Container from '@/components/layout/Container';
+import Image from "@/components/ui/Image.tsx";
 
 export default function Header() {
     const {i18n} = useTranslation();

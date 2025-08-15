@@ -1,7 +1,7 @@
 import {useEffect, useRef} from 'react';
 import {useTranslation} from 'react-i18next';
-import Container from '~/components/layout/Container';
-import Button from "~/components/ui/Button.tsx";
+import Container from '@/components/layout/Container';
+import Button from "@/components/ui/Button.tsx";
 
 // todo: Add Google Maps API key and Map ID
 const MAPS_API_KEY = 'YOUR_Maps_API_KEY'; // API keys Google Maps from https://www.google.com/search?q=https://cloud.google.com/maps-platform/get-started

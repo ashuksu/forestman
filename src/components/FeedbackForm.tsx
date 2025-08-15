@@ -1,8 +1,8 @@
 import {useEffect, useRef, useState} from 'react';
 import {useTranslation} from 'react-i18next';
 import clsx from 'clsx';
-import FormMessage from '~/components/ui/FormMessage';
-import Button from '~/components/ui/Button';
+import FormMessage from '@/components/ui/FormMessage';
+import Button from '@/components/ui/Button';
 
 const STORAGE_KEY = 'contact_form';
 

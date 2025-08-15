@@ -1,4 +1,4 @@
-import {APP_PATH} from '~/config/constants';
+import {APP_PATH} from '@/config/constants';
 import {Link, useNavigate} from 'react-router-dom';
 import {useTranslation} from 'react-i18next';
 

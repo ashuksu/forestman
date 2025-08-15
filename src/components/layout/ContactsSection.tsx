@@ -1,8 +1,8 @@
 import {useTranslation} from 'react-i18next';
-import Container from '~/components/layout/Container';
-import Title from '~/components/ui/Title';
-import Contacts from '~/components/Contacts';
-import FeedbackForm from '~/components/FeedbackForm';
+import Container from '@/components/layout/Container';
+import Title from '@/components/ui/Title';
+import Contacts from '@/components/Contacts';
+import FeedbackForm from '@/components/FeedbackForm';
 
 export default function ContactsSection() {
     const {t} = useTranslation();

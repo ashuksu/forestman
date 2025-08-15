@@ -1,4 +1,4 @@
-import Image from "~/components/ui/Image.tsx";
+import Image from "@/components/ui/Image.tsx";
 
 interface ProductCardProps {
     product: {
