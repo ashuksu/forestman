@@ -51,7 +51,7 @@ export const imageConfig: ImageConfig = {
         limitInputPixels: false,
         fastShrinkOnLoad: true
     },
-    allowedDomains: ['images.unsplash.com', 'googleusercontent.com', 'youtube.com'],
+    allowedDomains: ['images.unsplash.com', 'googleusercontent.com', 'youtube.com', 'picsum.photos'],
     defaultSizesAttr: '(min-width: 1200px) 1200px, (min-width: 800px) calc(100vw - 30px), (min-width: 400px) calc(100vw - 30px), calc(100vw - 30px)',
     brokenImage: '/broken-image.svg',
 };
