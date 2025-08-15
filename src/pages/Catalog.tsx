@@ -24,8 +24,12 @@ export default function Catalog() {
                 </div>
 
                 <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    {products.map(product => (
-                        <ProductCard key={product.id} product={product}/>
+                    {products.map((product, index) => (
+                        <ProductCard
+                            key={product.id}
+                            index={index}
+                            product={product}
+                        />
                     ))}
                 </div>
             </Container>

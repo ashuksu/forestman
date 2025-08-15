@@ -2,7 +2,7 @@ import {useTranslation} from 'react-i18next';
 import Title from '~/components/ui/Title';
 import Button from '~/components/ui/Button';
 import {BASE_PATH} from '~/config/constants';
-import Image from '@images/pictute4-400.webp';
+import Image from '~/components/ui/Image';
 
 export default function AboutSection() {
     const {t} = useTranslation();
@@ -12,11 +12,12 @@ export default function AboutSection() {
             <div
                 className="w-full max-w-[var(--2xl)] mx-auto px-4 md:px-0 flex flex-col md:flex-row items-center md:items-stretch gap-6">
                 <div className="w-full md:w-1/2">
-                    <img
-                        src={Image}
+                    <Image
+                        src="pictute4.jpeg"
                         alt={t('aboutSection.imageAlt')}
-                        loading="lazy"
-                        className="w-full h-auto md:h-full object-cover rounded-xl md:rounded-l-none 2xl:rounded-xl shadow-md"
+                        width={330}
+                        height={220}
+                        className="w-full md:h-full object-cover rounded-xl md:rounded-l-none 2xl:rounded-xl shadow-md"
                     />
                 </div>
                 <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left p-6">
