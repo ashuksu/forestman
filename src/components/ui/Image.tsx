@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useMemo} from 'react';
 import {imageConfig} from '~/config/image.config';
 import clsx from 'clsx';
+import {BASE_PATH} from '~/config/constants';
 
 const allImages = import.meta.glob('/src/assets/images-build/**/*.{jpg,jpeg,png,webp,svg,gif}', {
     eager: true,
@@ -98,7 +99,7 @@ const Image: React.FC<ImageProps> = ({
     if (error) {
         return (
             <img
-                src={imageConfig.brokenImage}
+                src={BASE_PATH + imageConfig.brokenImage}
                 alt="Broken image"
                 width={width}
                 height={height}
