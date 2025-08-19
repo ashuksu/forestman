@@ -177,7 +177,34 @@ export default defineConfig({
         tailwindcss(),
         tsconfigPaths(),
         imagePlugin(),
-        sitemap({hostname: WEBSITE_URL}) //https://forestmanwebsite.com
+        sitemap({
+            hostname: WEBSITE_URL,
+            outDir: 'dist',
+            dynamicRoutes: [
+                '/',
+                '/catalog',
+                '/about'
+            ],
+            exclude: ['/error', '/404'],
+            changefreq: {
+                '*': 'weekly',
+                '/': 'daily',
+                '/catalog': 'daily',
+                '/about': 'monthly'
+            },
+            priority: {
+                '*': 0.5,
+                '/': 1.0,
+                '/catalog': 0.8,
+                '/about': 0.3
+            },
+            generateRobotsTxt: true,
+            robots: [
+                {userAgent: '*', allow: '/', disallow: ['/error', '/404']}
+            ]
+        })
+
+
     ],
     resolve: {
         alias: {
