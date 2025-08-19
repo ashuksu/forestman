@@ -4,12 +4,14 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import {BASE_PATH} from "./src/config/constants";
+import {WEBSITE_URL} from "./src/config/constants";
 import sharp from 'sharp';
 import fs from 'fs/promises';
 import path from 'path';
 import cliProgress from 'cli-progress';
 import md5 from 'md5';
 import {imageConfig} from './src/config/image.config';
+import sitemap from 'vite-plugin-sitemap';
 
 /**
  * Recursively gets all original file paths from a directory, excluding generated files.
@@ -157,9 +159,8 @@ const imagePlugin = (): Plugin => ({
             const ext = path.extname(filePath).toLowerCase().slice(1);
             const basename = path.basename(filePath, `.${ext}`);
 
-            // processFile will update the payload (operation, filename)
             await processFile(filePath, destDir, basename, ext, progressBar);
-            progressBar.increment(); // Increment advances the counter
+            progressBar.increment();
         });
 
         await Promise.all(tasks);
@@ -175,7 +176,8 @@ export default defineConfig({
         react(),
         tailwindcss(),
         tsconfigPaths(),
-        imagePlugin()
+        imagePlugin(),
+        sitemap({hostname: WEBSITE_URL}) //https://forestmanwebsite.com
     ],
     resolve: {
         alias: {
