@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /error
+Disallow: /404
+
+Sitemap: https://forestmanwebsite.com/sitemap.xml
