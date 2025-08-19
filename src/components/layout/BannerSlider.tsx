@@ -33,7 +33,7 @@ export default function BannerSlider() {
                 }}
                 loop={true}
                 lazyPreloadPrevNext={1}
-                className="mySwiper h-fit landscape:h-screen w-full  "
+                className="mySwiper h-fit landscape:h-screen w-full"
             >
                 {images.map((image, index) => (
                     <SwiperSlide key={image.id}>
